@@ -32,17 +32,6 @@ describe 'VisualSlideApi' do
     end
   end
 
-  # unit tests for download_visual_slide
-  # Get Visual Slide Image as JPEG
-  # Get Visual Slide Image as JPEG
-  # @param [Hash] opts the optional parameters
-  # @return [VisualImageResult]
-  describe 'download_visual_slide test' do
-    it "should work" do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for get_visual_slide
   # Get Visual Slide Image as Base64
   # Get Visual Slide Image as Base64

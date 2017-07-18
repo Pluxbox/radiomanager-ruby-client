@@ -20,55 +20,6 @@ module RadioManagerClient
       @api_client = api_client
     end
 
-    # Get Visual Slide Image as JPEG
-    # Get Visual Slide Image as JPEG
-    # @param [Hash] opts the optional parameters
-    # @return [VisualImageResult]
-    def download_visual_slide(opts = {})
-      data, _status_code, _headers = download_visual_slide_with_http_info(opts)
-      return data
-    end
-
-    # Get Visual Slide Image as JPEG
-    # Get Visual Slide Image as JPEG
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(VisualImageResult, Fixnum, Hash)>] VisualImageResult data, response status code and response headers
-    def download_visual_slide_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: VisualSlideApi.download_visual_slide ..."
-      end
-      # resource path
-      local_var_path = "/visual/image"
-
-      # query parameters
-      query_params = {}
-
-      # header parameters
-      header_params = {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
-      # form parameters
-      form_params = {}
-
-      # http body (model)
-      post_body = nil
-      auth_names = ['API Key']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'VisualImageResult')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: VisualSlideApi#download_visual_slide\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Get Visual Slide Image as Base64
     # Get Visual Slide Image as Base64
     # @param [Hash] opts the optional parameters

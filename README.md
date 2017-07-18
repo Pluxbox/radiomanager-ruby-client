@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the Pluxbox Radiomanager Client
 
 - API version: 2.0
-- Package version: 1.0.83
+- Package version: 1.0.87
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -112,7 +112,6 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::UserApi* | [**get_user_by_id**](docs/UserApi.md#get_user_by_id) | **GET** /users/{id} | Get user by id
 *RadioManagerClient::UserApi* | [**invite_user_by_mail**](docs/UserApi.md#invite_user_by_mail) | **POST** /users/invite | Invite user by mail
 *RadioManagerClient::UserApi* | [**list_users**](docs/UserApi.md#list_users) | **GET** /users | Get all users.
-*RadioManagerClient::VisualSlideApi* | [**download_visual_slide**](docs/VisualSlideApi.md#download_visual_slide) | **GET** /visual/image | Get Visual Slide Image as JPEG
 *RadioManagerClient::VisualSlideApi* | [**get_visual_slide**](docs/VisualSlideApi.md#get_visual_slide) | **GET** /visual | Get Visual Slide Image as Base64
 
 
