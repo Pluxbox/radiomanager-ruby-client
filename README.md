@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the Pluxbox Radiomanager Client
 
 - API version: 2.0
-- Package version: 1.0.82
+- Package version: 1.0.83
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
