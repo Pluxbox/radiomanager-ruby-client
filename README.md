@@ -1,9 +1,9 @@
 # radiomanager_client
 
-RadioManagerClient - the Ruby gem for the Pluxbox Radiomanager Client
+RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.87
+- Package version: 1.0.90
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -49,7 +49,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *http://radiomanager.pb/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -102,6 +102,11 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::ProgramApi* | [**get_program_by_id**](docs/ProgramApi.md#get_program_by_id) | **GET** /programs/{id} | Get program by id
 *RadioManagerClient::ProgramApi* | [**list_programs**](docs/ProgramApi.md#list_programs) | **GET** /programs | Get all programs.
 *RadioManagerClient::ProgramApi* | [**update_program_by_id**](docs/ProgramApi.md#update_program_by_id) | **PATCH** /programs/{id} | Update program by id
+*RadioManagerClient::StoryApi* | [**create_story**](docs/StoryApi.md#create_story) | **POST** /stories | Create story.
+*RadioManagerClient::StoryApi* | [**delete_story_by_id**](docs/StoryApi.md#delete_story_by_id) | **DELETE** /stories/{id} | Delete story by id
+*RadioManagerClient::StoryApi* | [**get_story_by_id**](docs/StoryApi.md#get_story_by_id) | **GET** /stories/{id} | Get story by id
+*RadioManagerClient::StoryApi* | [**list_stories**](docs/StoryApi.md#list_stories) | **GET** /stories | Get all stories.
+*RadioManagerClient::StoryApi* | [**update_story_by_id**](docs/StoryApi.md#update_story_by_id) | **PATCH** /stories/{id} | Update story by id
 *RadioManagerClient::StringApi* | [**get_strings_by_name**](docs/StringApi.md#get_strings_by_name) | **GET** /strings/{name} | Get Strings (formatted)
 *RadioManagerClient::TagApi* | [**create_tag**](docs/TagApi.md#create_tag) | **POST** /tags | Create tag.
 *RadioManagerClient::TagApi* | [**delete_tag_by_id**](docs/TagApi.md#delete_tag_by_id) | **DELETE** /tags/{id} | Delete tag by id
@@ -215,6 +220,14 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ProgramResults](docs/ProgramResults.md)
  - [RadioManagerClient::ReadOnly](docs/ReadOnly.md)
  - [RadioManagerClient::RelationsPlaceholder](docs/RelationsPlaceholder.md)
+ - [RadioManagerClient::Story](docs/Story.md)
+ - [RadioManagerClient::StoryInputOnly](docs/StoryInputOnly.md)
+ - [RadioManagerClient::StoryOutputOnly](docs/StoryOutputOnly.md)
+ - [RadioManagerClient::StoryRelations](docs/StoryRelations.md)
+ - [RadioManagerClient::StoryRelationsItems](docs/StoryRelationsItems.md)
+ - [RadioManagerClient::StoryRelationsTags](docs/StoryRelationsTags.md)
+ - [RadioManagerClient::StoryRelationsTagsParams](docs/StoryRelationsTagsParams.md)
+ - [RadioManagerClient::StoryResults](docs/StoryResults.md)
  - [RadioManagerClient::Success](docs/Success.md)
  - [RadioManagerClient::Tag](docs/Tag.md)
  - [RadioManagerClient::TagOutputOnly](docs/TagOutputOnly.md)
@@ -247,6 +260,8 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::PresenterResult](docs/PresenterResult.md)
  - [RadioManagerClient::ProgramDataInput](docs/ProgramDataInput.md)
  - [RadioManagerClient::ProgramResult](docs/ProgramResult.md)
+ - [RadioManagerClient::StoryDataInput](docs/StoryDataInput.md)
+ - [RadioManagerClient::StoryResult](docs/StoryResult.md)
  - [RadioManagerClient::TagDataInput](docs/TagDataInput.md)
  - [RadioManagerClient::TagResult](docs/TagResult.md)
 

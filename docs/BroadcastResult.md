@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **repetition_type** | **String** |  | [optional] 
 **repetition_end** | **DateTime** |  | [optional] 
 **repetition_start** | **DateTime** |  | [optional] 
-**repetition_days** | **Array&lt;BOOLEAN&gt;** |  | [optional] 
+**repetition_days** | **String** |  | [optional] 
 **pty_code_id** | **Integer** |  | [optional] 
 **items** | [**BroadcastRelationsItems**](BroadcastRelationsItems.md) |  | [optional] 
 **blocks** | [**BroadcastRelationsBlocks**](BroadcastRelationsBlocks.md) |  | [optional] 
