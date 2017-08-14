@@ -128,8 +128,8 @@ module RadioManagerClient
     attr_accessor :force_ending_format
 
     def initialize
-      @scheme = 'https'
-      @host = 'staging.radiomanager.pluxbox.com'
+      @scheme = 'http'
+      @host = 'radiomanager.pb'
       @base_path = '/api/v2'
       @api_key = {}
       @api_key_prefix = {}

@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.92
+- Package version: 1.0.93
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -49,7 +49,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *http://radiomanager.pb/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
