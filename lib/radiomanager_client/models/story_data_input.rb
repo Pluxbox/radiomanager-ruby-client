@@ -25,8 +25,6 @@ module RadioManagerClient
 
     attr_accessor :description
 
-    attr_accessor :tags
-
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -35,8 +33,7 @@ module RadioManagerClient
         :'recommended' => :'recommended',
         :'field_values' => :'field_values',
         :'name' => :'name',
-        :'description' => :'description',
-        :'tags' => :'tags'
+        :'description' => :'description'
       }
     end
 
@@ -47,8 +44,7 @@ module RadioManagerClient
         :'recommended' => :'BOOLEAN',
         :'field_values' => :'Object',
         :'name' => :'String',
-        :'description' => :'String',
-        :'tags' => :'Array<Integer>'
+        :'description' => :'String'
       }
     end
 
@@ -78,12 +74,6 @@ module RadioManagerClient
 
       if attributes.has_key?(:'description')
         self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'tags')
-        if (value = attributes[:'tags']).is_a?(Array)
-          self.tags = value
-        end
       end
 
     end
@@ -120,8 +110,7 @@ module RadioManagerClient
           recommended == o.recommended &&
           field_values == o.field_values &&
           name == o.name &&
-          description == o.description &&
-          tags == o.tags
+          description == o.description
     end
 
     # @see the `==` method
@@ -133,7 +122,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [model_type_id, recommended, field_values, name, description, tags].hash
+      [model_type_id, recommended, field_values, name, description].hash
     end
 
     # Builds the object from hash
