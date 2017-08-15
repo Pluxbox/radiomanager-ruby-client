@@ -47,7 +47,7 @@ module RadioManagerClient
 
     attr_accessor :details
 
-    attr_accessor :previous_id
+    attr_accessor :_previous_id
 
     attr_accessor :contacts
 
@@ -94,7 +94,7 @@ module RadioManagerClient
         :'user_draft_id' => :'user_draft_id',
         :'static_start' => :'static_start',
         :'details' => :'details',
-        :'previous_id' => :'previous_id',
+        :'_previous_id' => :'_previous_id',
         :'contacts' => :'contacts',
         :'tags' => :'tags'
       }
@@ -119,7 +119,7 @@ module RadioManagerClient
         :'user_draft_id' => :'Integer',
         :'static_start' => :'BOOLEAN',
         :'details' => :'String',
-        :'previous_id' => :'Integer',
+        :'_previous_id' => :'Integer',
         :'contacts' => :'Array<Integer>',
         :'tags' => :'Array<Integer>'
       }
@@ -197,8 +197,8 @@ module RadioManagerClient
         self.details = attributes[:'details']
       end
 
-      if attributes.has_key?(:'previous_id')
-        self.previous_id = attributes[:'previous_id']
+      if attributes.has_key?(:'_previous_id')
+        self._previous_id = attributes[:'_previous_id']
       end
 
       if attributes.has_key?(:'contacts')
@@ -271,7 +271,7 @@ module RadioManagerClient
           user_draft_id == o.user_draft_id &&
           static_start == o.static_start &&
           details == o.details &&
-          previous_id == o.previous_id &&
+          _previous_id == o._previous_id &&
           contacts == o.contacts &&
           tags == o.tags
     end
@@ -285,7 +285,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [model_type_id, block_id, external_id, field_values, title, duration, start, status, import, campaign_id, recommended, station_draft_id, program_draft_id, user_draft_id, static_start, details, previous_id, contacts, tags].hash
+      [model_type_id, block_id, external_id, field_values, title, duration, start, status, import, campaign_id, recommended, station_draft_id, program_draft_id, user_draft_id, static_start, details, _previous_id, contacts, tags].hash
     end
 
     # Builds the object from hash
