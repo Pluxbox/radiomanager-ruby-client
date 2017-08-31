@@ -59,7 +59,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'model_type_id' => :'Integer',
-        :'external_id' => :'Integer',
+        :'external_id' => :'String',
         :'field_values' => :'ImportItemFieldValues',
         :'title' => :'String',
         :'duration' => :'Integer',

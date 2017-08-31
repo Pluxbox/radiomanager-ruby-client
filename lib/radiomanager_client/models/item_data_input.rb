@@ -105,7 +105,7 @@ module RadioManagerClient
       {
         :'model_type_id' => :'Integer',
         :'block_id' => :'Integer',
-        :'external_id' => :'Integer',
+        :'external_id' => :'String',
         :'field_values' => :'ImportItemFieldValues',
         :'title' => :'String',
         :'duration' => :'Integer',
@@ -223,10 +223,6 @@ module RadioManagerClient
         invalid_properties.push("invalid value for 'model_type_id', model_type_id cannot be nil.")
       end
 
-      if @external_id.nil?
-        invalid_properties.push("invalid value for 'external_id', external_id cannot be nil.")
-      end
-
       return invalid_properties
     end
 
@@ -234,7 +230,6 @@ module RadioManagerClient
     # @return true if the model is valid
     def valid?
       return false if @model_type_id.nil?
-      return false if @external_id.nil?
       status_validator = EnumAttributeValidator.new('String', ["scheduled", "playing", "played"])
       return false unless status_validator.valid?(@status)
       return true

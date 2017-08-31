@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.97
+- Package version: 1.0.99
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation

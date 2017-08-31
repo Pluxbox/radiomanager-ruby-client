@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **_external_station_id** | **Integer** |  | [optional] 
 **model_type_id** | **Integer** |  | 
 **block_id** | **Integer** |  | [optional] 
-**external_id** | **Integer** |  | 
+**external_id** | **String** |  | [optional] 
 **field_values** | [**ImportItemFieldValues**](ImportItemFieldValues.md) |  | [optional] 
 **title** | **String** |  | [optional] 
 **duration** | **Integer** |  | [optional] 
