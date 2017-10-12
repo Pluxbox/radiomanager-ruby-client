@@ -72,11 +72,14 @@ describe 'BlockApi' do
   # Get a list of all blocks currently in your station. This feature supports pagination and will give a maximum of 50 blocks back.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
+  # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [DateTime] :start_min Minimum start date *(Optional)*
   # @option opts [DateTime] :start_max Maximum start date *(Optional)*
-  # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :limit Results per page *(Optional)*
+  # @option opts [String] :order_by Field to order the results *(Optional)*
+  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [BlockResults]
   describe 'list_blocks test' do

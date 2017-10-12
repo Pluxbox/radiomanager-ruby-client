@@ -1,18 +1,18 @@
-# RadioManagerClient::VisualSlideApi
+# RadioManagerClient::StationApi
 
 All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_visual_slide**](VisualSlideApi.md#get_visual_slide) | **GET** /visual | Get Visual Slide Image as Base64
+[**get_station**](StationApi.md#get_station) | **GET** /station | Get own station only
 
 
-# **get_visual_slide**
-> VisualResult get_visual_slide
+# **get_station**
+> StationResult get_station
 
-Get Visual Slide Image as Base64
+Get own station only
 
-Get Visual Slide Image as Base64
+Get own station only
 
 ### Example
 ```ruby
@@ -26,14 +26,14 @@ RadioManagerClient.configure do |config|
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = RadioManagerClient::VisualSlideApi.new
+api_instance = RadioManagerClient::StationApi.new
 
 begin
-  #Get Visual Slide Image as Base64
-  result = api_instance.get_visual_slide
+  #Get own station only
+  result = api_instance.get_station
   p result
 rescue RadioManagerClient::ApiError => e
-  puts "Exception when calling VisualSlideApi->get_visual_slide: #{e}"
+  puts "Exception when calling StationApi->get_station: #{e}"
 end
 ```
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VisualResult**](VisualResult.md)
+[**StationResult**](StationResult.md)
 
 ### Authorization
 

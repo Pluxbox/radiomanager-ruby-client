@@ -1,6 +1,6 @@
 # RadioManagerClient::PresenterApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -200,9 +200,12 @@ api_instance = RadioManagerClient::PresenterApi.new
 
 opts = { 
   page: 789, # Integer | Current page *(Optional)*
-  model_type_id: 789, # Integer | Search on ModelType ID (Optional)
   program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
   broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  model_type_id: 789, # Integer | Search on ModelType ID (Optional)
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
   _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
@@ -220,9 +223,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] 
- **model_type_id** | **Integer**| Search on ModelType ID (Optional) | [optional] 
  **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **model_type_id** | **Integer**| Search on ModelType ID (Optional) | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

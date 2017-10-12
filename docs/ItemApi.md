@@ -1,6 +1,6 @@
 # RadioManagerClient::ItemApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -315,23 +315,24 @@ api_instance = RadioManagerClient::ItemApi.new
 
 opts = { 
   page: 789, # Integer | Current page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
+  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
+  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  campaign_id: 789, # Integer | Search on Campaign ID *(Optional)* `(Relation)`
+  contact_id: 789, # Integer | Search on Contact ID *(Optional)* `(Relation)`
+  program_draft_id: 789, # Integer | Search on Program Draft ID *(Optional)*
+  user_draft_id: 789, # Integer | Search on User Draft ID *(Optional)*
+  station_draft_id: 789, # Integer | Search on Station Draft ID *(Optional)*
+  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
   start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
   start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
   duration_min: 56, # Integer | Minimum duration (seconds) *(Optional)*
   duration_max: 56, # Integer | Maximum duration (seconds) *(Optional)*
   status: "status_example", # String | Play Status of item *(Optional)*
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)*
-  program_draft_id: 789, # Integer | Search on Program Draft ID *(Optional)*
-  user_draft_id: 789, # Integer | Search on User Draft ID *(Optional)*
-  station_draft_id: 789, # Integer | Search on Station Draft ID *(Optional)*
-  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  campaign_id: 789, # Integer | Search on Campaign ID *(Optional)* `(Relation)`
-  contact_id: 789, # Integer | Search on Contact ID *(Optional)* `(Relation)`
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
   _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
@@ -349,23 +350,24 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] 
- **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
- **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
+ **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **model_type_id** | **Integer**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **tag_id** | **Integer**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **campaign_id** | **Integer**| Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **contact_id** | **Integer**| Search on Contact ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **program_draft_id** | **Integer**| Search on Program Draft ID *(Optional)* | [optional] 
+ **user_draft_id** | **Integer**| Search on User Draft ID *(Optional)* | [optional] 
+ **station_draft_id** | **Integer**| Search on Station Draft ID *(Optional)* | [optional] 
+ **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **start_min** | **DateTime**| Minimum start date *(Optional)* | [optional] 
  **start_max** | **DateTime**| Maximum start date *(Optional)* | [optional] 
  **duration_min** | **Integer**| Minimum duration (seconds) *(Optional)* | [optional] 
  **duration_max** | **Integer**| Maximum duration (seconds) *(Optional)* | [optional] 
  **status** | **String**| Play Status of item *(Optional)* | [optional] 
- **model_type_id** | **Integer**| Search on ModelType ID *(Optional)* | [optional] 
- **program_draft_id** | **Integer**| Search on Program Draft ID *(Optional)* | [optional] 
- **user_draft_id** | **Integer**| Search on User Draft ID *(Optional)* | [optional] 
- **station_draft_id** | **Integer**| Search on Station Draft ID *(Optional)* | [optional] 
- **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **campaign_id** | **Integer**| Search on Campaign ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **contact_id** | **Integer**| Search on Contact ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **tag_id** | **Integer**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

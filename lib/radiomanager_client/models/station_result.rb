@@ -14,41 +14,21 @@ require 'date'
 
 module RadioManagerClient
 
-  class StoryDataInput
-    attr_accessor :model_type_id
-
-    attr_accessor :recommended
-
-    attr_accessor :field_values
-
-    attr_accessor :name
-
-    attr_accessor :description
-
-    attr_accessor :tags
+  class StationResult
+    attr_accessor :station
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'model_type_id' => :'model_type_id',
-        :'recommended' => :'recommended',
-        :'field_values' => :'field_values',
-        :'name' => :'name',
-        :'description' => :'description',
-        :'tags' => :'tags'
+        :'station' => :'station'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'model_type_id' => :'Integer',
-        :'recommended' => :'BOOLEAN',
-        :'field_values' => :'Object',
-        :'name' => :'String',
-        :'description' => :'String',
-        :'tags' => :'Array<Integer>'
+        :'station' => :'StationResultStation'
       }
     end
 
@@ -60,30 +40,8 @@ module RadioManagerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'model_type_id')
-        self.model_type_id = attributes[:'model_type_id']
-      end
-
-      if attributes.has_key?(:'recommended')
-        self.recommended = attributes[:'recommended']
-      end
-
-      if attributes.has_key?(:'field_values')
-        self.field_values = attributes[:'field_values']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'description')
-        self.description = attributes[:'description']
-      end
-
-      if attributes.has_key?(:'tags')
-        if (value = attributes[:'tags']).is_a?(Array)
-          self.tags = value
-        end
+      if attributes.has_key?(:'station')
+        self.station = attributes[:'station']
       end
 
     end
@@ -92,22 +50,12 @@ module RadioManagerClient
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @model_type_id.nil?
-        invalid_properties.push("invalid value for 'model_type_id', model_type_id cannot be nil.")
-      end
-
-      if @name.nil?
-        invalid_properties.push("invalid value for 'name', name cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @model_type_id.nil?
-      return false if @name.nil?
       return true
     end
 
@@ -116,12 +64,7 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          model_type_id == o.model_type_id &&
-          recommended == o.recommended &&
-          field_values == o.field_values &&
-          name == o.name &&
-          description == o.description &&
-          tags == o.tags
+          station == o.station
     end
 
     # @see the `==` method
@@ -133,7 +76,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [model_type_id, recommended, field_values, name, description, tags].hash
+      [station].hash
     end
 
     # Builds the object from hash

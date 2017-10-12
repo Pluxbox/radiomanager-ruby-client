@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.99
+- Package version: 1.0.99-dev
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -49,7 +49,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::ProgramApi* | [**get_program_by_id**](docs/ProgramApi.md#get_program_by_id) | **GET** /programs/{id} | Get program by id
 *RadioManagerClient::ProgramApi* | [**list_programs**](docs/ProgramApi.md#list_programs) | **GET** /programs | Get all programs.
 *RadioManagerClient::ProgramApi* | [**update_program_by_id**](docs/ProgramApi.md#update_program_by_id) | **PATCH** /programs/{id} | Update program by id
+*RadioManagerClient::StationApi* | [**get_station**](docs/StationApi.md#get_station) | **GET** /station | Get own station only
 *RadioManagerClient::StoryApi* | [**create_story**](docs/StoryApi.md#create_story) | **POST** /stories | Create story.
 *RadioManagerClient::StoryApi* | [**delete_story_by_id**](docs/StoryApi.md#delete_story_by_id) | **DELETE** /stories/{id} | Delete story by id
 *RadioManagerClient::StoryApi* | [**get_story_by_id**](docs/StoryApi.md#get_story_by_id) | **GET** /stories/{id} | Get story by id
@@ -220,7 +221,10 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ProgramResults](docs/ProgramResults.md)
  - [RadioManagerClient::ReadOnly](docs/ReadOnly.md)
  - [RadioManagerClient::RelationsPlaceholder](docs/RelationsPlaceholder.md)
+ - [RadioManagerClient::StationResult](docs/StationResult.md)
+ - [RadioManagerClient::StationResultStation](docs/StationResultStation.md)
  - [RadioManagerClient::Story](docs/Story.md)
+ - [RadioManagerClient::StoryInputOnly](docs/StoryInputOnly.md)
  - [RadioManagerClient::StoryOutputOnly](docs/StoryOutputOnly.md)
  - [RadioManagerClient::StoryRelations](docs/StoryRelations.md)
  - [RadioManagerClient::StoryRelationsItems](docs/StoryRelationsItems.md)

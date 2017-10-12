@@ -1,6 +1,6 @@
 # RadioManagerClient::UserApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -195,7 +195,10 @@ api_instance = RadioManagerClient::UserApi.new
 
 opts = { 
   page: 1, # Integer | Current page *(Optional)*
-  role_id: 789 # Integer | Search on Role ID *(Optional)*
+  role_id: 789, # Integer | Search on Role ID *(Optional)*
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example" # String | Direction of ordering *(Optional)*
 }
 
 begin
@@ -213,6 +216,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] [default to 1]
  **role_id** | **Integer**| Search on Role ID *(Optional)* | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
 
 ### Return type
 

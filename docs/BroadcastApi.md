@@ -1,6 +1,6 @@
 # RadioManagerClient::BroadcastApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -253,7 +253,8 @@ end
 api_instance = RadioManagerClient::BroadcastApi.new
 
 opts = { 
-  date: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Date *(Optional)*
+  date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Date *(Optional)*
+  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
 }
 
 begin
@@ -270,6 +271,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **DateTime**| Date *(Optional)* | [optional] 
+ **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -308,7 +310,8 @@ end
 api_instance = RadioManagerClient::BroadcastApi.new
 
 opts = { 
-  date: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | Date *(Optional)*
+  date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Date *(Optional)*
+  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
 }
 
 begin
@@ -325,6 +328,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **DateTime**| Date *(Optional)* | [optional] 
+ **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -411,7 +415,8 @@ end
 api_instance = RadioManagerClient::BroadcastApi.new
 
 opts = { 
-  date: "date_example" # String | Date *(Optional)*
+  date: "date_example", # String | Date *(Optional)*
+  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
 }
 
 begin
@@ -428,6 +433,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **String**| Date *(Optional)* | [optional] 
+ **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -467,15 +473,18 @@ api_instance = RadioManagerClient::BroadcastApi.new
 
 opts = { 
   page: 1, # Integer | Current page *(Optional)*
-  start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
-  start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)*
+  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
+  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
   tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
   presenter_id: 789, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
   genre_id: 789, # Integer | Search on Genre ID *(Optional)* `(Relation)`
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
+  start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
   _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
@@ -493,15 +502,18 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] [default to 1]
- **start_min** | **DateTime**| Minimum start date *(Optional)* | [optional] 
- **start_max** | **DateTime**| Maximum start date *(Optional)* | [optional] 
- **model_type_id** | **Integer**| Search on ModelType ID *(Optional)* | [optional] 
+ **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **model_type_id** | **Integer**| Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **tag_id** | **Integer**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **presenter_id** | **Integer**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **genre_id** | **Integer**| Search on Genre ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **start_min** | **DateTime**| Minimum start date *(Optional)* | [optional] 
+ **start_max** | **DateTime**| Maximum start date *(Optional)* | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

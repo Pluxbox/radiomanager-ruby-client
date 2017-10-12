@@ -200,10 +200,13 @@ module RadioManagerClient
     # List all campaigns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Current page *(Optional)*
-    # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
     # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [DateTime] :start_min Minimum start date *(Optional)*
     # @option opts [DateTime] :start_max Maximum start date *(Optional)*
+    # @option opts [Integer] :limit Results per page *(Optional)*
+    # @option opts [String] :order_by Field to order the results *(Optional)*
+    # @option opts [String] :order_direction Direction of ordering *(Optional)*
     # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
     # @return [CampaignResults]
     def list_campaigns(opts = {})
@@ -215,10 +218,13 @@ module RadioManagerClient
     # List all campaigns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Current page *(Optional)*
-    # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
     # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [DateTime] :start_min Minimum start date *(Optional)*
     # @option opts [DateTime] :start_max Maximum start date *(Optional)*
+    # @option opts [Integer] :limit Results per page *(Optional)*
+    # @option opts [String] :order_by Field to order the results *(Optional)*
+    # @option opts [String] :order_direction Direction of ordering *(Optional)*
     # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
     # @return [Array<(CampaignResults, Fixnum, Hash)>] CampaignResults data, response status code and response headers
     def list_campaigns_with_http_info(opts = {})
@@ -229,16 +235,30 @@ module RadioManagerClient
         fail ArgumentError, 'invalid value for "opts[:"page"]" when calling CampaignApi.list_campaigns, must be greater than or equal to 0.'
       end
 
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 50
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling CampaignApi.list_campaigns, must be smaller than or equal to 50.'
+      end
+
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling CampaignApi.list_campaigns, must be greater than or equal to 1.'
+      end
+
+      if @api_client.config.client_side_validation && opts[:'order_direction'] && !['asc', 'desc'].include?(opts[:'order_direction'])
+        fail ArgumentError, 'invalid value for "order_direction", must be one of asc, desc'
+      end
       # resource path
       local_var_path = "/campaigns"
 
       # query parameters
       query_params = {}
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
-      query_params[:'model_type_id'] = opts[:'model_type_id'] if !opts[:'model_type_id'].nil?
       query_params[:'item_id'] = opts[:'item_id'] if !opts[:'item_id'].nil?
+      query_params[:'model_type_id'] = opts[:'model_type_id'] if !opts[:'model_type_id'].nil?
       query_params[:'start-min'] = opts[:'start_min'] if !opts[:'start_min'].nil?
       query_params[:'start-max'] = opts[:'start_max'] if !opts[:'start_max'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'order-by'] = opts[:'order_by'] if !opts[:'order_by'].nil?
+      query_params[:'order-direction'] = opts[:'order_direction'] if !opts[:'order_direction'].nil?
       query_params[:'_external_station_id'] = opts[:'_external_station_id'] if !opts[:'_external_station_id'].nil?
 
       # header parameters

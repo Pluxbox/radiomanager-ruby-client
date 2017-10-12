@@ -1,6 +1,6 @@
 # RadioManagerClient::BlockApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -187,11 +187,14 @@ api_instance = RadioManagerClient::BlockApi.new
 
 opts = { 
   page: 1, # Integer | Current page *(Optional)*
+  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
   start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
   start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
   _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
@@ -209,11 +212,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] [default to 1]
+ **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **start_min** | **DateTime**| Minimum start date *(Optional)* | [optional] 
  **start_max** | **DateTime**| Maximum start date *(Optional)* | [optional] 
- **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

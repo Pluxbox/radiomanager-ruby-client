@@ -1,6 +1,6 @@
 # RadioManagerClient::ModelTypeApi
 
-All URIs are relative to *https://staging.radiomanager.pluxbox.com/api/v2*
+All URIs are relative to *https://radiomanager.pb/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -89,13 +89,16 @@ api_instance = RadioManagerClient::ModelTypeApi.new
 
 opts = { 
   page: 789, # Integer | Current page *(Optional)*
-  model: "model_example", # String | 
   program_id: 789, # Integer | Search on Program ID *(Optional)*
   broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)*
   item_id: 789, # Integer | Search on Item ID *(Optional)*
   campaign_id: 789, # Integer | Search on Campaign ID *(Optional)*
   presenter_id: 789, # Integer | Search on Presenter ID *(Optional)*
   contact_id: 789, # Integer | Search on Contact ID *(Optional)*
+  model: "model_example", # String | Search Modeltypes for certain Model *(Optional)*
+  limit: 789, # Integer | Results per page *(Optional)*
+  order_by: "order_by_example", # String | Field to order the results *(Optional)*
+  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
   _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
@@ -113,13 +116,16 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] 
- **model** | **String**|  | [optional] 
  **program_id** | **Integer**| Search on Program ID *(Optional)* | [optional] 
  **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* | [optional] 
  **item_id** | **Integer**| Search on Item ID *(Optional)* | [optional] 
  **campaign_id** | **Integer**| Search on Campaign ID *(Optional)* | [optional] 
  **presenter_id** | **Integer**| Search on Presenter ID *(Optional)* | [optional] 
  **contact_id** | **Integer**| Search on Contact ID *(Optional)* | [optional] 
+ **model** | **String**| Search Modeltypes for certain Model *(Optional)* | [optional] 
+ **limit** | **Integer**| Results per page *(Optional)* | [optional] 
+ **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
+ **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type

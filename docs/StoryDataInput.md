@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **field_values** | **Object** |  | [optional] 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
+**tags** | **Array&lt;Integer&gt;** |  | [optional] 
 
 

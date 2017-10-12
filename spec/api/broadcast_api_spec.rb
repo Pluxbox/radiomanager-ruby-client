@@ -85,6 +85,7 @@ describe 'BroadcastApi' do
   # Get current Broadcast
   # @param [Hash] opts the optional parameters
   # @option opts [DateTime] :date Date *(Optional)*
+  # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
   # @return [EPGBroadcast]
   describe 'get_daily_epg test' do
     it "should work" do
@@ -97,6 +98,7 @@ describe 'BroadcastApi' do
   # Get EPG by date
   # @param [Hash] opts the optional parameters
   # @option opts [DateTime] :date Date *(Optional)*
+  # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
   # @return [EPGBroadcast]
   describe 'get_epg_by_date test' do
     it "should work" do
@@ -120,6 +122,7 @@ describe 'BroadcastApi' do
   # Get weekly EPG
   # @param [Hash] opts the optional parameters
   # @option opts [String] :date Date *(Optional)*
+  # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
   # @return [EPGBroadcast]
   describe 'get_weekly_epg test' do
     it "should work" do
@@ -132,15 +135,18 @@ describe 'BroadcastApi' do
   # List all broadcasts.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
-  # @option opts [DateTime] :start_min Minimum start date *(Optional)*
-  # @option opts [DateTime] :start_max Maximum start date *(Optional)*
-  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
+  # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :block_id Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :block_id Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :genre_id Search on Genre ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [DateTime] :start_min Minimum start date *(Optional)*
+  # @option opts [DateTime] :start_max Maximum start date *(Optional)*
+  # @option opts [Integer] :limit Results per page *(Optional)*
+  # @option opts [String] :order_by Field to order the results *(Optional)*
+  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [BroadcastResults]
   describe 'list_broadcasts test' do

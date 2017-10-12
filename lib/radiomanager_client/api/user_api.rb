@@ -198,6 +198,9 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Current page *(Optional)* (default to 1)
     # @option opts [Integer] :role_id Search on Role ID *(Optional)*
+    # @option opts [Integer] :limit Results per page *(Optional)*
+    # @option opts [String] :order_by Field to order the results *(Optional)*
+    # @option opts [String] :order_direction Direction of ordering *(Optional)*
     # @return [UserResults]
     def list_users(opts = {})
       data, _status_code, _headers = list_users_with_http_info(opts)
@@ -209,6 +212,9 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Current page *(Optional)*
     # @option opts [Integer] :role_id Search on Role ID *(Optional)*
+    # @option opts [Integer] :limit Results per page *(Optional)*
+    # @option opts [String] :order_by Field to order the results *(Optional)*
+    # @option opts [String] :order_direction Direction of ordering *(Optional)*
     # @return [Array<(UserResults, Fixnum, Hash)>] UserResults data, response status code and response headers
     def list_users_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -218,6 +224,17 @@ module RadioManagerClient
         fail ArgumentError, 'invalid value for "opts[:"page"]" when calling UserApi.list_users, must be greater than or equal to 0.'
       end
 
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] > 50
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling UserApi.list_users, must be smaller than or equal to 50.'
+      end
+
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling UserApi.list_users, must be greater than or equal to 1.'
+      end
+
+      if @api_client.config.client_side_validation && opts[:'order_direction'] && !['asc', 'desc'].include?(opts[:'order_direction'])
+        fail ArgumentError, 'invalid value for "order_direction", must be one of asc, desc'
+      end
       # resource path
       local_var_path = "/users"
 
@@ -225,6 +242,9 @@ module RadioManagerClient
       query_params = {}
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'role_id'] = opts[:'role_id'] if !opts[:'role_id'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'order-by'] = opts[:'order_by'] if !opts[:'order_by'].nil?
+      query_params[:'order-direction'] = opts[:'order_direction'] if !opts[:'order_direction'].nil?
 
       # header parameters
       header_params = {}
