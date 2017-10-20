@@ -74,13 +74,10 @@ describe 'CampaignApi' do
   # List all campaigns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
+  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
   # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [DateTime] :start_min Minimum start date *(Optional)*
   # @option opts [DateTime] :start_max Maximum start date *(Optional)*
-  # @option opts [Integer] :limit Results per page *(Optional)*
-  # @option opts [String] :order_by Field to order the results *(Optional)*
-  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [CampaignResults]
   describe 'list_campaigns test' do

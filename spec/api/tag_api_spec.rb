@@ -78,9 +78,6 @@ describe 'TagApi' do
   # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :contact_id Search on Contact ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :limit Results per page *(Optional)*
-  # @option opts [String] :order_by Field to order the results *(Optional)*
-  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [TagResults]
   describe 'list_tags test' do

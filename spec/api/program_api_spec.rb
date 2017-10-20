@@ -74,16 +74,13 @@ describe 'ProgramApi' do
   # List all programs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
-  # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :genre_id Search on Genre ID *(Optional)*
-  # @option opts [Integer] :block_id Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
+  # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
-  # @option opts [Integer] :limit Results per page *(Optional)*
-  # @option opts [String] :order_by Field to order the results *(Optional)*
-  # @option opts [String] :order_direction Direction of ordering *(Optional)*
+  # @option opts [Integer] :block_id Search on Block ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [ProgramResults]
   describe 'list_programs test' do

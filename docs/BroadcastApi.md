@@ -1,6 +1,6 @@
 # RadioManagerClient::BroadcastApi
 
-All URIs are relative to *https://radiomanager.pb/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -232,7 +232,7 @@ This endpoint does not need any parameter.
 
 
 # **get_daily_epg**
-> EPGBroadcast get_daily_epg(opts)
+> EPGResults get_daily_epg(opts)
 
 Get daily EPG
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGBroadcast**](EPGBroadcast.md)
+[**EPGResults**](EPGResults.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 
 # **get_epg_by_date**
-> EPGBroadcast get_epg_by_date(opts)
+> EPGResults get_epg_by_date(opts)
 
 Get EPG by date
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGBroadcast**](EPGBroadcast.md)
+[**EPGResults**](EPGResults.md)
 
 ### Authorization
 
@@ -394,7 +394,7 @@ This endpoint does not need any parameter.
 
 
 # **get_weekly_epg**
-> EPGBroadcast get_weekly_epg(opts)
+> EPGResults get_weekly_epg(opts)
 
 Get weekly EPG
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGBroadcast**](EPGBroadcast.md)
+[**EPGResults**](EPGResults.md)
 
 ### Authorization
 
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 
 # **print_broadcast_by_id**
-> EPGBroadcast print_broadcast_by_id(id, opts)
+> EPGResults print_broadcast_by_id(id, opts)
 
 Print Broadcast by id
 
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGBroadcast**](EPGBroadcast.md)
+[**EPGResults**](EPGResults.md)
 
 ### Authorization
 

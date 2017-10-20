@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **pty_code** | **Integer** |  | [optional] 
 **pty_type** | **String** |  | [optional] 
 **station_key** | **String** |  | [optional] 
+**timezone** | **String** |  | [optional] 
 **trial_date** | **DateTime** |  | [optional] 
 
 

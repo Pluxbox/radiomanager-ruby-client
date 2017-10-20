@@ -74,9 +74,6 @@ describe 'UserApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
   # @option opts [Integer] :role_id Search on Role ID *(Optional)*
-  # @option opts [Integer] :limit Results per page *(Optional)*
-  # @option opts [String] :order_by Field to order the results *(Optional)*
-  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @return [UserResults]
   describe 'list_users test' do
     it "should work" do

@@ -132,7 +132,7 @@ describe 'ItemDataInput' do
     end
   end
 
-  describe 'test attribute "_previous_id"' do
+  describe 'test attribute "previous_id"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

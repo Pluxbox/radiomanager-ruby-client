@@ -63,6 +63,8 @@ module RadioManagerClient
 
     attr_accessor :station_key
 
+    attr_accessor :timezone
+
     attr_accessor :trial_date
 
 
@@ -93,6 +95,7 @@ module RadioManagerClient
         :'pty_code' => :'pty_code',
         :'pty_type' => :'pty_type',
         :'station_key' => :'station_key',
+        :'timezone' => :'timezone',
         :'trial_date' => :'trial_date'
       }
     end
@@ -124,6 +127,7 @@ module RadioManagerClient
         :'pty_code' => :'Integer',
         :'pty_type' => :'String',
         :'station_key' => :'String',
+        :'timezone' => :'String',
         :'trial_date' => :'DateTime'
       }
     end
@@ -232,6 +236,10 @@ module RadioManagerClient
         self.station_key = attributes[:'station_key']
       end
 
+      if attributes.has_key?(:'timezone')
+        self.timezone = attributes[:'timezone']
+      end
+
       if attributes.has_key?(:'trial_date')
         self.trial_date = attributes[:'trial_date']
       end
@@ -280,6 +288,7 @@ module RadioManagerClient
           pty_code == o.pty_code &&
           pty_type == o.pty_type &&
           station_key == o.station_key &&
+          timezone == o.timezone &&
           trial_date == o.trial_date
     end
 
@@ -292,7 +301,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, created_at, updated_at, system_name, short_name, medium_name, website, email, keywords, description, sms, telephone, genre_id, language, active, logo_rectangle, logo_128x128, logo_320x320, logo_600x600, pay_off, pty_code, pty_type, station_key, trial_date].hash
+      [id, name, created_at, updated_at, system_name, short_name, medium_name, website, email, keywords, description, sms, telephone, genre_id, language, active, logo_rectangle, logo_128x128, logo_320x320, logo_600x600, pay_off, pty_code, pty_type, station_key, timezone, trial_date].hash
     end
 
     # Builds the object from hash

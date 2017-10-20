@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.99-dev
+- Package version: 1.0.100
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -49,7 +49,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://radiomanager.pb/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -78,7 +78,6 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::ContactApi* | [**get_contact_by_id**](docs/ContactApi.md#get_contact_by_id) | **GET** /contacts/{id} | Get contact by id
 *RadioManagerClient::ContactApi* | [**list_contacts**](docs/ContactApi.md#list_contacts) | **GET** /contacts | Get all contacts.
 *RadioManagerClient::ContactApi* | [**update_contact_by_id**](docs/ContactApi.md#update_contact_by_id) | **PATCH** /contacts/{id} | Update contact by id
-*RadioManagerClient::ExternalMessageApi* | [**queue_external_message**](docs/ExternalMessageApi.md#queue_external_message) | **POST** /externalmessagequeue | Queue External Message.
 *RadioManagerClient::GenreApi* | [**get_genre_by_id**](docs/GenreApi.md#get_genre_by_id) | **GET** /genres/{id} | Get genre by id
 *RadioManagerClient::GenreApi* | [**list_genres**](docs/GenreApi.md#list_genres) | **GET** /genres | List all genres.
 *RadioManagerClient::ItemApi* | [**create_item**](docs/ItemApi.md#create_item) | **POST** /items | Create an new item.
@@ -132,6 +131,8 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::BlockRelationsProgram](docs/BlockRelationsProgram.md)
  - [RadioManagerClient::BlockResults](docs/BlockResults.md)
  - [RadioManagerClient::Broadcast](docs/Broadcast.md)
+ - [RadioManagerClient::BroadcastEPGDay](docs/BroadcastEPGDay.md)
+ - [RadioManagerClient::BroadcastEPGRelations](docs/BroadcastEPGRelations.md)
  - [RadioManagerClient::BroadcastFieldValues](docs/BroadcastFieldValues.md)
  - [RadioManagerClient::BroadcastInputOnly](docs/BroadcastInputOnly.md)
  - [RadioManagerClient::BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
@@ -159,8 +160,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ContactResults](docs/ContactResults.md)
  - [RadioManagerClient::Data](docs/Data.md)
  - [RadioManagerClient::Data1](docs/Data1.md)
- - [RadioManagerClient::EPGBroadcast](docs/EPGBroadcast.md)
- - [RadioManagerClient::ExternalMessageQueueData](docs/ExternalMessageQueueData.md)
+ - [RadioManagerClient::EPGResults](docs/EPGResults.md)
  - [RadioManagerClient::Forbidden](docs/Forbidden.md)
  - [RadioManagerClient::Genre](docs/Genre.md)
  - [RadioManagerClient::GenreOutputOnly](docs/GenreOutputOnly.md)
@@ -250,6 +250,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::VisualResult](docs/VisualResult.md)
  - [RadioManagerClient::BlockResult](docs/BlockResult.md)
  - [RadioManagerClient::BroadcastDataInput](docs/BroadcastDataInput.md)
+ - [RadioManagerClient::BroadcastEPGResult](docs/BroadcastEPGResult.md)
  - [RadioManagerClient::BroadcastResult](docs/BroadcastResult.md)
  - [RadioManagerClient::CampaignDataInput](docs/CampaignDataInput.md)
  - [RadioManagerClient::CampaignResult](docs/CampaignResult.md)
@@ -260,6 +261,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ItemResult](docs/ItemResult.md)
  - [RadioManagerClient::ModelTypeResult](docs/ModelTypeResult.md)
  - [RadioManagerClient::PresenterDataInput](docs/PresenterDataInput.md)
+ - [RadioManagerClient::PresenterEPGResult](docs/PresenterEPGResult.md)
  - [RadioManagerClient::PresenterResult](docs/PresenterResult.md)
  - [RadioManagerClient::ProgramDataInput](docs/ProgramDataInput.md)
  - [RadioManagerClient::ProgramResult](docs/ProgramResult.md)

@@ -250,7 +250,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [DateTime] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [EPGBroadcast]
+    # @return [EPGResults]
     def get_daily_epg(opts = {})
       data, _status_code, _headers = get_daily_epg_with_http_info(opts)
       return data
@@ -261,7 +261,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [DateTime] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [Array<(EPGBroadcast, Fixnum, Hash)>] EPGBroadcast data, response status code and response headers
+    # @return [Array<(EPGResults, Fixnum, Hash)>] EPGResults data, response status code and response headers
     def get_daily_epg_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.get_daily_epg ..."
@@ -293,7 +293,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'EPGBroadcast')
+        :return_type => 'EPGResults')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#get_daily_epg\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -305,7 +305,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [DateTime] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [EPGBroadcast]
+    # @return [EPGResults]
     def get_epg_by_date(opts = {})
       data, _status_code, _headers = get_epg_by_date_with_http_info(opts)
       return data
@@ -316,7 +316,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [DateTime] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [Array<(EPGBroadcast, Fixnum, Hash)>] EPGBroadcast data, response status code and response headers
+    # @return [Array<(EPGResults, Fixnum, Hash)>] EPGResults data, response status code and response headers
     def get_epg_by_date_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.get_epg_by_date ..."
@@ -348,7 +348,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'EPGBroadcast')
+        :return_type => 'EPGResults')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#get_epg_by_date\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -409,7 +409,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [EPGBroadcast]
+    # @return [EPGResults]
     def get_weekly_epg(opts = {})
       data, _status_code, _headers = get_weekly_epg_with_http_info(opts)
       return data
@@ -420,7 +420,7 @@ module RadioManagerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :date Date *(Optional)*
     # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
-    # @return [Array<(EPGBroadcast, Fixnum, Hash)>] EPGBroadcast data, response status code and response headers
+    # @return [Array<(EPGResults, Fixnum, Hash)>] EPGResults data, response status code and response headers
     def get_weekly_epg_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.get_weekly_epg ..."
@@ -452,7 +452,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'EPGBroadcast')
+        :return_type => 'EPGResults')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#get_weekly_epg\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -572,7 +572,7 @@ module RadioManagerClient
     # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
-    # @return [EPGBroadcast]
+    # @return [EPGResults]
     def print_broadcast_by_id(id, opts = {})
       data, _status_code, _headers = print_broadcast_by_id_with_http_info(id, opts)
       return data
@@ -585,7 +585,7 @@ module RadioManagerClient
     # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
     # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
-    # @return [Array<(EPGBroadcast, Fixnum, Hash)>] EPGBroadcast data, response status code and response headers
+    # @return [Array<(EPGResults, Fixnum, Hash)>] EPGResults data, response status code and response headers
     def print_broadcast_by_id_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.print_broadcast_by_id ..."
@@ -626,7 +626,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'EPGBroadcast')
+        :return_type => 'EPGResults')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#print_broadcast_by_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

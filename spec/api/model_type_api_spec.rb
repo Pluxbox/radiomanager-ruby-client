@@ -50,16 +50,13 @@ describe 'ModelTypeApi' do
   # List all modelTypes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
+  # @option opts [String] :model 
   # @option opts [Integer] :program_id Search on Program ID *(Optional)*
   # @option opts [Integer] :broadcast_id Search on Broadcast ID *(Optional)*
   # @option opts [Integer] :item_id Search on Item ID *(Optional)*
   # @option opts [Integer] :campaign_id Search on Campaign ID *(Optional)*
   # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)*
   # @option opts [Integer] :contact_id Search on Contact ID *(Optional)*
-  # @option opts [String] :model Search Modeltypes for certain Model *(Optional)*
-  # @option opts [Integer] :limit Results per page *(Optional)*
-  # @option opts [String] :order_by Field to order the results *(Optional)*
-  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [ModelTypeResults]
   describe 'list_model_types test' do
