@@ -77,7 +77,7 @@ module RadioManagerClient
         :'item' => :'Array<Item>',
         :'_external_station_id' => :'Integer',
         :'model_type_id' => :'Integer',
-        :'field_values' => :'Array<Object>',
+        :'field_values' => :'Object',
         :'title' => :'String',
         :'start' => :'DateTime',
         :'stop' => :'DateTime',
@@ -127,9 +127,7 @@ module RadioManagerClient
       end
 
       if attributes.has_key?(:'field_values')
-        if (value = attributes[:'field_values']).is_a?(Array)
-          self.field_values = value
-        end
+        self.field_values = attributes[:'field_values']
       end
 
       if attributes.has_key?(:'title')

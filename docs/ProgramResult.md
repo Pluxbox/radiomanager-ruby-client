@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **deleted_at** | **DateTime** |  | 
 **_external_station_id** | **Integer** |  | [optional] 
 **model_type_id** | **Integer** |  | 
-**field_values** | [**ProgramFieldValues**](ProgramFieldValues.md) |  | [optional] 
+**field_values** | **Object** |  | [optional] 
 **title** | **String** |  | 
 **disabled** | **BOOLEAN** |  | [optional] 
 **genre_id** | **Integer** |  | [optional] 

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **model_type_id** | **Integer** |  | 
 **external_id** | **String** |  | 
-**field_values** | [**ImportItemFieldValues**](ImportItemFieldValues.md) |  | [optional] 
+**field_values** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **duration** | **Integer** |  | [optional] 
 **start** | **DateTime** |  | [optional] 

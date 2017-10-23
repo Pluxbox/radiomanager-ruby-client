@@ -65,7 +65,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'model_type_id' => :'Integer',
-        :'field_values' => :'ProgramFieldValues',
+        :'field_values' => :'Object',
         :'title' => :'String',
         :'disabled' => :'BOOLEAN',
         :'genre_id' => :'Integer',

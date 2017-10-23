@@ -44,7 +44,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'model_type_id' => :'Integer',
-        :'field_values' => :'ContactFieldValues',
+        :'field_values' => :'Object',
         :'email' => :'String',
         :'firstname' => :'String',
         :'lastname' => :'String',

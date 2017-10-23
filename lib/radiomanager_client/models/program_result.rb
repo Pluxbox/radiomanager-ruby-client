@@ -103,7 +103,7 @@ module RadioManagerClient
         :'deleted_at' => :'DateTime',
         :'_external_station_id' => :'Integer',
         :'model_type_id' => :'Integer',
-        :'field_values' => :'ProgramFieldValues',
+        :'field_values' => :'Object',
         :'title' => :'String',
         :'disabled' => :'BOOLEAN',
         :'genre_id' => :'Integer',

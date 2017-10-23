@@ -73,7 +73,7 @@ module RadioManagerClient
         :'deleted_at' => :'DateTime',
         :'_external_station_id' => :'Integer',
         :'model_type_id' => :'Integer',
-        :'field_values' => :'ContactFieldValues',
+        :'field_values' => :'Object',
         :'email' => :'String',
         :'firstname' => :'String',
         :'lastname' => :'String',

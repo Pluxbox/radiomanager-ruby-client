@@ -59,7 +59,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'model_type_id' => :'Integer',
-        :'field_values' => :'Array<Object>',
+        :'field_values' => :'Object',
         :'firstname' => :'String',
         :'lastname' => :'String',
         :'active' => :'BOOLEAN',
@@ -85,9 +85,7 @@ module RadioManagerClient
       end
 
       if attributes.has_key?(:'field_values')
-        if (value = attributes[:'field_values']).is_a?(Array)
-          self.field_values = value
-        end
+        self.field_values = attributes[:'field_values']
       end
 
       if attributes.has_key?(:'firstname')

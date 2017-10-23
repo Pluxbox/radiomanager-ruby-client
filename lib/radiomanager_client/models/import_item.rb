@@ -60,7 +60,7 @@ module RadioManagerClient
       {
         :'model_type_id' => :'Integer',
         :'external_id' => :'String',
-        :'field_values' => :'ImportItemFieldValues',
+        :'field_values' => :'Object',
         :'title' => :'String',
         :'duration' => :'Integer',
         :'start' => :'DateTime',

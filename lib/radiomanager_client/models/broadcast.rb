@@ -115,7 +115,7 @@ module RadioManagerClient
         :'program_id' => :'Integer',
         :'model_type_id' => :'Integer',
         :'station_id' => :'Integer',
-        :'field_values' => :'BroadcastFieldValues',
+        :'field_values' => :'Object',
         :'title' => :'String',
         :'start' => :'DateTime',
         :'stop' => :'DateTime',

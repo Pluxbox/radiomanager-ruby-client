@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **item** | [**Array&lt;Item&gt;**](Item.md) |  | [optional] 
 **_external_station_id** | **Integer** |  | [optional] 
 **model_type_id** | **Integer** |  | 
-**field_values** | **Array&lt;Object&gt;** |  | [optional] 
+**field_values** | **Object** |  | [optional] 
 **title** | **String** |  | [optional] 
 **start** | **DateTime** |  | 
 **stop** | **DateTime** |  | 

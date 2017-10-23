@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.0.100
+- Package version: 1.0.101
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -133,7 +133,6 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::Broadcast](docs/Broadcast.md)
  - [RadioManagerClient::BroadcastEPGDay](docs/BroadcastEPGDay.md)
  - [RadioManagerClient::BroadcastEPGRelations](docs/BroadcastEPGRelations.md)
- - [RadioManagerClient::BroadcastFieldValues](docs/BroadcastFieldValues.md)
  - [RadioManagerClient::BroadcastInputOnly](docs/BroadcastInputOnly.md)
  - [RadioManagerClient::BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
  - [RadioManagerClient::BroadcastRelations](docs/BroadcastRelations.md)
@@ -151,7 +150,6 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
  - [RadioManagerClient::CampaignResults](docs/CampaignResults.md)
  - [RadioManagerClient::Contact](docs/Contact.md)
- - [RadioManagerClient::ContactFieldValues](docs/ContactFieldValues.md)
  - [RadioManagerClient::ContactOutputOnly](docs/ContactOutputOnly.md)
  - [RadioManagerClient::ContactRelations](docs/ContactRelations.md)
  - [RadioManagerClient::ContactRelationsItems](docs/ContactRelationsItems.md)
@@ -170,7 +168,6 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::GenreRelationsPrograms](docs/GenreRelationsPrograms.md)
  - [RadioManagerClient::GenreResults](docs/GenreResults.md)
  - [RadioManagerClient::ImportItem](docs/ImportItem.md)
- - [RadioManagerClient::ImportItemFieldValues](docs/ImportItemFieldValues.md)
  - [RadioManagerClient::InlineResponse202](docs/InlineResponse202.md)
  - [RadioManagerClient::InternalServerError](docs/InternalServerError.md)
  - [RadioManagerClient::InviteUserData](docs/InviteUserData.md)
@@ -208,7 +205,6 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::PresenterRelationsProgramsParams](docs/PresenterRelationsProgramsParams.md)
  - [RadioManagerClient::PresenterResults](docs/PresenterResults.md)
  - [RadioManagerClient::Program](docs/Program.md)
- - [RadioManagerClient::ProgramFieldValues](docs/ProgramFieldValues.md)
  - [RadioManagerClient::ProgramInputOnly](docs/ProgramInputOnly.md)
  - [RadioManagerClient::ProgramOutputOnly](docs/ProgramOutputOnly.md)
  - [RadioManagerClient::ProgramRelations](docs/ProgramRelations.md)
