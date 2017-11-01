@@ -129,7 +129,7 @@ module RadioManagerClient
 
     def initialize
       @scheme = 'https'
-      @host = 'radiomanager.io'
+      @host = 'staging.radiomanager.io'
       @base_path = '/api/v2'
       @api_key = {}
       @api_key_prefix = {}

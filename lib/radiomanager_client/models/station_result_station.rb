@@ -112,7 +112,7 @@ module RadioManagerClient
         :'medium_name' => :'String',
         :'website' => :'String',
         :'email' => :'String',
-        :'keywords' => :'String',
+        :'keywords' => :'Array<String>',
         :'description' => :'String',
         :'sms' => :'String',
         :'telephone' => :'String',
@@ -177,7 +177,9 @@ module RadioManagerClient
       end
 
       if attributes.has_key?(:'keywords')
-        self.keywords = attributes[:'keywords']
+        if (value = attributes[:'keywords']).is_a?(Array)
+          self.keywords = value
+        end
       end
 
       if attributes.has_key?(:'description')
