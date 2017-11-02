@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 
 # **get_current_broadcast**
-> Broadcast get_current_broadcast
+> BroadcastResult get_current_broadcast(opts)
 
 Get current Broadcast
 
@@ -204,9 +204,13 @@ end
 
 api_instance = RadioManagerClient::BroadcastApi.new
 
+opts = { 
+  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+}
+
 begin
   #Get current Broadcast
-  result = api_instance.get_current_broadcast
+  result = api_instance.get_current_broadcast(opts)
   p result
 rescue RadioManagerClient::ApiError => e
   puts "Exception when calling BroadcastApi->get_current_broadcast: #{e}"
@@ -214,11 +218,14 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
-[**Broadcast**](Broadcast.md)
+[**BroadcastResult**](BroadcastResult.md)
 
 ### Authorization
 
@@ -346,7 +353,7 @@ Name | Type | Description  | Notes
 
 
 # **get_next_broadcast**
-> Broadcast get_next_broadcast
+> BroadcastResult get_next_broadcast(opts)
 
 Get next Broadcast
 
@@ -366,9 +373,13 @@ end
 
 api_instance = RadioManagerClient::BroadcastApi.new
 
+opts = { 
+  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+}
+
 begin
   #Get next Broadcast
-  result = api_instance.get_next_broadcast
+  result = api_instance.get_next_broadcast(opts)
   p result
 rescue RadioManagerClient::ApiError => e
   puts "Exception when calling BroadcastApi->get_next_broadcast: #{e}"
@@ -376,11 +387,14 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
-[**Broadcast**](Broadcast.md)
+[**BroadcastResult**](BroadcastResult.md)
 
 ### Authorization
 

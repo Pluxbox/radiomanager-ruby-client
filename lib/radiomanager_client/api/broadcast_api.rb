@@ -199,7 +199,8 @@ module RadioManagerClient
     # Get current Broadcast
     # Get current Broadcast
     # @param [Hash] opts the optional parameters
-    # @return [Broadcast]
+    # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
+    # @return [BroadcastResult]
     def get_current_broadcast(opts = {})
       data, _status_code, _headers = get_current_broadcast_with_http_info(opts)
       return data
@@ -208,7 +209,8 @@ module RadioManagerClient
     # Get current Broadcast
     # Get current Broadcast
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Broadcast, Fixnum, Hash)>] Broadcast data, response status code and response headers
+    # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
+    # @return [Array<(BroadcastResult, Fixnum, Hash)>] BroadcastResult data, response status code and response headers
     def get_current_broadcast_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.get_current_broadcast ..."
@@ -218,6 +220,7 @@ module RadioManagerClient
 
       # query parameters
       query_params = {}
+      query_params[:'withunpublished'] = opts[:'withunpublished'] if !opts[:'withunpublished'].nil?
 
       # header parameters
       header_params = {}
@@ -238,7 +241,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Broadcast')
+        :return_type => 'BroadcastResult')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#get_current_broadcast\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -358,7 +361,8 @@ module RadioManagerClient
     # Get next Broadcast
     # Get next Broadcast
     # @param [Hash] opts the optional parameters
-    # @return [Broadcast]
+    # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
+    # @return [BroadcastResult]
     def get_next_broadcast(opts = {})
       data, _status_code, _headers = get_next_broadcast_with_http_info(opts)
       return data
@@ -367,7 +371,8 @@ module RadioManagerClient
     # Get next Broadcast
     # Get next Broadcast
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Broadcast, Fixnum, Hash)>] Broadcast data, response status code and response headers
+    # @option opts [BOOLEAN] :withunpublished Show Unpublished *(Optional)*
+    # @return [Array<(BroadcastResult, Fixnum, Hash)>] BroadcastResult data, response status code and response headers
     def get_next_broadcast_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BroadcastApi.get_next_broadcast ..."
@@ -377,6 +382,7 @@ module RadioManagerClient
 
       # query parameters
       query_params = {}
+      query_params[:'withunpublished'] = opts[:'withunpublished'] if !opts[:'withunpublished'].nil?
 
       # header parameters
       header_params = {}
@@ -397,7 +403,7 @@ module RadioManagerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Broadcast')
+        :return_type => 'BroadcastResult')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: BroadcastApi#get_next_broadcast\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
