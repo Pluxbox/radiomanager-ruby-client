@@ -28,6 +28,5 @@ Name | Type | Description | Notes
 **pty_type** | **String** |  | [optional] 
 **station_key** | **String** |  | [optional] 
 **timezone** | **String** |  | [optional] 
-**trial_date** | **DateTime** |  | [optional] 
 
 
