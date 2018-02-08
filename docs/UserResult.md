@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **settings** | [**UserResultSettings**](UserResultSettings.md) |  | [optional] 
 **language** | **BOOLEAN** |  | [optional] 
 **active_external_station_id** | **Integer** |  | [optional] 
-**role_id** | **Integer** |  | [optional] 
+**roles** | [**Array&lt;UserResultRoles&gt;**](UserResultRoles.md) |  | [optional] 
 
 

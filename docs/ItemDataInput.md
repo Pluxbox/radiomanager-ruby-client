@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **static_start** | **BOOLEAN** |  | [optional] 
 **details** | **String** |  | [optional] 
 **_previous_id** | **Integer** |  | [optional] 
+**_before_id** | **Integer** |  | [optional] 
 **contacts** | **Array&lt;Integer&gt;** |  | [optional] 
 **tags** | **Array&lt;Integer&gt;** |  | [optional] 
 

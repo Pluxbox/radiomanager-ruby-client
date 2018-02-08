@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.1.4-dev
+- Package version: 1.1.5-dev
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -55,7 +55,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *RadioManagerClient::BlockApi* | [**get_block_by_id**](docs/BlockApi.md#get_block_by_id) | **GET** /blocks/{id} | Get block by id
 *RadioManagerClient::BlockApi* | [**get_current_block**](docs/BlockApi.md#get_current_block) | **GET** /blocks/current | Get current Block
-*RadioManagerClient::BlockApi* | [**get_next_block**](docs/BlockApi.md#get_next_block) | **GET** /blocks/next | Get next Block
+*RadioManagerClient::BlockApi* | [**get_next_block**](docs/BlockApi.md#get_next_block) | **GET** /blocks/next | Get upcoming Block
 *RadioManagerClient::BlockApi* | [**list_blocks**](docs/BlockApi.md#list_blocks) | **GET** /blocks | Get a list of all blocks currently in your station.
 *RadioManagerClient::BroadcastApi* | [**create_broadcast**](docs/BroadcastApi.md#create_broadcast) | **POST** /broadcasts | Create broadcast.
 *RadioManagerClient::BroadcastApi* | [**delete_broadcast_by_id**](docs/BroadcastApi.md#delete_broadcast_by_id) | **DELETE** /broadcasts/{id} | Delete broadcast by id
@@ -241,6 +241,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::TooManyRequests](docs/TooManyRequests.md)
  - [RadioManagerClient::UnprocessableEntity](docs/UnprocessableEntity.md)
  - [RadioManagerClient::UserResult](docs/UserResult.md)
+ - [RadioManagerClient::UserResultRoles](docs/UserResultRoles.md)
  - [RadioManagerClient::UserResultSettings](docs/UserResultSettings.md)
  - [RadioManagerClient::UserResults](docs/UserResults.md)
  - [RadioManagerClient::VisualResult](docs/VisualResult.md)

@@ -14,25 +14,17 @@ require 'date'
 
 module RadioManagerClient
 
-  class ModelTypeOptions
-    attr_accessor :color
-
-    attr_accessor :sub_broadcast
-
+  class SearchDataInput
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'color' => :'color',
-        :'sub_broadcast' => :'subBroadcast'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'color' => :'String',
-        :'sub_broadcast' => :'BOOLEAN'
       }
     end
 
@@ -43,14 +35,6 @@ module RadioManagerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'color')
-        self.color = attributes[:'color']
-      end
-
-      if attributes.has_key?(:'subBroadcast')
-        self.sub_broadcast = attributes[:'subBroadcast']
-      end
 
     end
 
@@ -71,9 +55,7 @@ module RadioManagerClient
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class &&
-          color == o.color &&
-          sub_broadcast == o.sub_broadcast
+      self.class == o.class
     end
 
     # @see the `==` method
@@ -85,7 +67,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [color, sub_broadcast].hash
+      [].hash
     end
 
     # Builds the object from hash

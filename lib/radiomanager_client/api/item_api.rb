@@ -527,7 +527,7 @@ module RadioManagerClient
     # Update item by id.
     # @param id ID of Item **(Required)**
     # @param [Hash] opts the optional parameters
-    # @option opts [Item] :data Data *(Optional)*
+    # @option opts [ItemDataInput] :data Data *(Optional)*
     # @return [Success]
     def update_item_by_id(id, opts = {})
       data, _status_code, _headers = update_item_by_id_with_http_info(id, opts)
@@ -538,7 +538,7 @@ module RadioManagerClient
     # Update item by id.
     # @param id ID of Item **(Required)**
     # @param [Hash] opts the optional parameters
-    # @option opts [Item] :data Data *(Optional)*
+    # @option opts [ItemDataInput] :data Data *(Optional)*
     # @return [Array<(Success, Fixnum, Hash)>] Success data, response status code and response headers
     def update_item_by_id_with_http_info(id, opts = {})
       if @api_client.config.debugging
