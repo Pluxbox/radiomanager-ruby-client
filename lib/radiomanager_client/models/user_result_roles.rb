@@ -14,29 +14,33 @@ require 'date'
 
 module RadioManagerClient
 
-  class EPGBroadcast
-    attr_accessor :_2016_01_11
+  class UserResultRoles
+    attr_accessor :href
 
-    attr_accessor :next_page_url
+    attr_accessor :model
 
-    attr_accessor :prev_page_url
+    attr_accessor :operation
+
+    attr_accessor :params
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_2016_01_11' => :'2016-01-11',
-        :'next_page_url' => :'next_page_url',
-        :'prev_page_url' => :'prev_page_url'
+        :'href' => :'href',
+        :'model' => :'model',
+        :'operation' => :'operation',
+        :'params' => :'params'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'_2016_01_11' => :'Array<BroadcastResult>',
-        :'next_page_url' => :'String',
-        :'prev_page_url' => :'String'
+        :'href' => :'String',
+        :'model' => :'String',
+        :'operation' => :'String',
+        :'params' => :'Integer'
       }
     end
 
@@ -48,22 +52,20 @@ module RadioManagerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'2016-01-11')
-        if (value = attributes[:'2016-01-11']).is_a?(Array)
-          self._2016_01_11 = value
-        end
+      if attributes.has_key?(:'href')
+        self.href = attributes[:'href']
       end
 
-      if attributes.has_key?(:'next_page_url')
-        self.next_page_url = attributes[:'next_page_url']
-      else
-        self.next_page_url = "https://raidiomanager.pluxbox.com/api/v1/broadcasts/epg/{identifier}/2016-01-12"
+      if attributes.has_key?(:'model')
+        self.model = attributes[:'model']
       end
 
-      if attributes.has_key?(:'prev_page_url')
-        self.prev_page_url = attributes[:'prev_page_url']
-      else
-        self.prev_page_url = "https://raidiomanager.pluxbox.com/pb/api/v1/broadcasts/epg/{identifier}/2016-01-10"
+      if attributes.has_key?(:'operation')
+        self.operation = attributes[:'operation']
+      end
+
+      if attributes.has_key?(:'params')
+        self.params = attributes[:'params']
       end
 
     end
@@ -72,27 +74,12 @@ module RadioManagerClient
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @_2016_01_11.nil?
-        invalid_properties.push("invalid value for '_2016_01_11', _2016_01_11 cannot be nil.")
-      end
-
-      if @next_page_url.nil?
-        invalid_properties.push("invalid value for 'next_page_url', next_page_url cannot be nil.")
-      end
-
-      if @prev_page_url.nil?
-        invalid_properties.push("invalid value for 'prev_page_url', prev_page_url cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @_2016_01_11.nil?
-      return false if @next_page_url.nil?
-      return false if @prev_page_url.nil?
       return true
     end
 
@@ -101,9 +88,10 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          _2016_01_11 == o._2016_01_11 &&
-          next_page_url == o.next_page_url &&
-          prev_page_url == o.prev_page_url
+          href == o.href &&
+          model == o.model &&
+          operation == o.operation &&
+          params == o.params
     end
 
     # @see the `==` method
@@ -115,7 +103,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_2016_01_11, next_page_url, prev_page_url].hash
+      [href, model, operation, params].hash
     end
 
     # Builds the object from hash

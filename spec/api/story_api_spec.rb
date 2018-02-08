@@ -74,9 +74,12 @@ describe 'StoryApi' do
   # List all stories.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Current page *(Optional)*
-  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)*
-  # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
   # @option opts [Integer] :item_id Search on Item ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :model_type_id Search on ModelType ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+  # @option opts [Integer] :limit Results per page *(Optional)*
+  # @option opts [String] :order_by Field to order the results *(Optional)*
+  # @option opts [String] :order_direction Direction of ordering *(Optional)*
   # @option opts [Integer] :_external_station_id Query on a different (content providing) station *(Optional)*
   # @return [StoryResults]
   describe 'list_stories test' do

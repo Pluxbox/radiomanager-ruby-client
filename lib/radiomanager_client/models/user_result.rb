@@ -37,7 +37,7 @@ module RadioManagerClient
 
     attr_accessor :active_external_station_id
 
-    attr_accessor :role_id
+    attr_accessor :roles
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -54,7 +54,7 @@ module RadioManagerClient
         :'settings' => :'settings',
         :'language' => :'language',
         :'active_external_station_id' => :'active_external_station_id',
-        :'role_id' => :'role_id'
+        :'roles' => :'roles'
       }
     end
 
@@ -72,7 +72,7 @@ module RadioManagerClient
         :'settings' => :'UserResultSettings',
         :'language' => :'BOOLEAN',
         :'active_external_station_id' => :'Integer',
-        :'role_id' => :'Integer'
+        :'roles' => :'Array<UserResultRoles>'
       }
     end
 
@@ -128,8 +128,10 @@ module RadioManagerClient
         self.active_external_station_id = attributes[:'active_external_station_id']
       end
 
-      if attributes.has_key?(:'role_id')
-        self.role_id = attributes[:'role_id']
+      if attributes.has_key?(:'roles')
+        if (value = attributes[:'roles']).is_a?(Array)
+          self.roles = value
+        end
       end
 
     end
@@ -183,7 +185,7 @@ module RadioManagerClient
           settings == o.settings &&
           language == o.language &&
           active_external_station_id == o.active_external_station_id &&
-          role_id == o.role_id
+          roles == o.roles
     end
 
     # @see the `==` method
@@ -195,7 +197,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, email, firstname, lastname, phone, created_at, updated_at, active, settings, language, active_external_station_id, role_id].hash
+      [id, email, firstname, lastname, phone, created_at, updated_at, active, settings, language, active_external_station_id, roles].hash
     end
 
     # Builds the object from hash

@@ -17,18 +17,22 @@ module RadioManagerClient
   class ModelTypeOptions
     attr_accessor :color
 
+    attr_accessor :sub_broadcast
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'color' => :'color'
+        :'color' => :'color',
+        :'sub_broadcast' => :'subBroadcast'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'color' => :'String'
+        :'color' => :'String',
+        :'sub_broadcast' => :'BOOLEAN'
       }
     end
 
@@ -42,6 +46,10 @@ module RadioManagerClient
 
       if attributes.has_key?(:'color')
         self.color = attributes[:'color']
+      end
+
+      if attributes.has_key?(:'subBroadcast')
+        self.sub_broadcast = attributes[:'subBroadcast']
       end
 
     end
@@ -64,7 +72,8 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          color == o.color
+          color == o.color &&
+          sub_broadcast == o.sub_broadcast
     end
 
     # @see the `==` method
@@ -76,7 +85,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [color].hash
+      [color, sub_broadcast].hash
     end
 
     # Builds the object from hash

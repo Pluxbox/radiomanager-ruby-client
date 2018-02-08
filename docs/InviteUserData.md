@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | 
-**role_id** | **Integer** |  | 
+**role_ids** | **Array&lt;Integer&gt;** |  | 
 
 

@@ -131,8 +131,8 @@ module RadioManagerClient
       return data, status_code, headers
     end
 
-    # Get next Block
-    # Get next Block
+    # Get upcoming Block
+    # Get upcoming Block
     # @param [Hash] opts the optional parameters
     # @return [BlockResult]
     def get_next_block(opts = {})
@@ -140,8 +140,8 @@ module RadioManagerClient
       return data
     end
 
-    # Get next Block
-    # Get next Block
+    # Get upcoming Block
+    # Get upcoming Block
     # @param [Hash] opts the optional parameters
     # @return [Array<(BlockResult, Fixnum, Hash)>] BlockResult data, response status code and response headers
     def get_next_block_with_http_info(opts = {})

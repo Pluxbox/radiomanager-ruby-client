@@ -17,6 +17,8 @@ module RadioManagerClient
   class ItemInputOnly
     attr_accessor :_previous_id
 
+    attr_accessor :_before_id
+
     attr_accessor :contacts
 
     attr_accessor :tags
@@ -26,6 +28,7 @@ module RadioManagerClient
     def self.attribute_map
       {
         :'_previous_id' => :'_previous_id',
+        :'_before_id' => :'_before_id',
         :'contacts' => :'contacts',
         :'tags' => :'tags'
       }
@@ -35,6 +38,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'_previous_id' => :'Integer',
+        :'_before_id' => :'Integer',
         :'contacts' => :'Array<Integer>',
         :'tags' => :'Array<Integer>'
       }
@@ -50,6 +54,10 @@ module RadioManagerClient
 
       if attributes.has_key?(:'_previous_id')
         self._previous_id = attributes[:'_previous_id']
+      end
+
+      if attributes.has_key?(:'_before_id')
+        self._before_id = attributes[:'_before_id']
       end
 
       if attributes.has_key?(:'contacts')
@@ -85,6 +93,7 @@ module RadioManagerClient
       return true if self.equal?(o)
       self.class == o.class &&
           _previous_id == o._previous_id &&
+          _before_id == o._before_id &&
           contacts == o.contacts &&
           tags == o.tags
     end
@@ -98,7 +107,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_previous_id, contacts, tags].hash
+      [_previous_id, _before_id, contacts, tags].hash
     end
 
     # Builds the object from hash

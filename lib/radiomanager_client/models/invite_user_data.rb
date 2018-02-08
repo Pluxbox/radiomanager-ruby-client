@@ -17,14 +17,14 @@ module RadioManagerClient
   class InviteUserData
     attr_accessor :email
 
-    attr_accessor :role_id
+    attr_accessor :role_ids
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'email' => :'email',
-        :'role_id' => :'role_id'
+        :'role_ids' => :'role_ids'
       }
     end
 
@@ -32,7 +32,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'email' => :'String',
-        :'role_id' => :'Integer'
+        :'role_ids' => :'Array<Integer>'
       }
     end
 
@@ -48,8 +48,10 @@ module RadioManagerClient
         self.email = attributes[:'email']
       end
 
-      if attributes.has_key?(:'role_id')
-        self.role_id = attributes[:'role_id']
+      if attributes.has_key?(:'role_ids')
+        if (value = attributes[:'role_ids']).is_a?(Array)
+          self.role_ids = value
+        end
       end
 
     end
@@ -62,8 +64,8 @@ module RadioManagerClient
         invalid_properties.push("invalid value for 'email', email cannot be nil.")
       end
 
-      if @role_id.nil?
-        invalid_properties.push("invalid value for 'role_id', role_id cannot be nil.")
+      if @role_ids.nil?
+        invalid_properties.push("invalid value for 'role_ids', role_ids cannot be nil.")
       end
 
       return invalid_properties
@@ -73,7 +75,7 @@ module RadioManagerClient
     # @return true if the model is valid
     def valid?
       return false if @email.nil?
-      return false if @role_id.nil?
+      return false if @role_ids.nil?
       return true
     end
 
@@ -83,7 +85,7 @@ module RadioManagerClient
       return true if self.equal?(o)
       self.class == o.class &&
           email == o.email &&
-          role_id == o.role_id
+          role_ids == o.role_ids
     end
 
     # @see the `==` method
@@ -95,7 +97,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email, role_id].hash
+      [email, role_ids].hash
     end
 
     # Builds the object from hash

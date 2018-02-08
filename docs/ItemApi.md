@@ -519,7 +519,7 @@ api_instance = RadioManagerClient::ItemApi.new
 id = 789 # Integer | ID of Item **(Required)**
 
 opts = { 
-  data: RadioManagerClient::Item.new # Item | Data *(Optional)*
+  data: RadioManagerClient::ItemDataInput.new # ItemDataInput | Data *(Optional)*
 }
 
 begin
@@ -536,7 +536,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID of Item **(Required)** | 
- **data** | [**Item**](Item.md)| Data *(Optional)* | [optional] 
+ **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
 
