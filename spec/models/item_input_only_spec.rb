@@ -32,7 +32,13 @@ describe 'ItemInputOnly' do
       expect(@instance).to be_instance_of(RadioManagerClient::ItemInputOnly)
     end
   end
-  describe 'test attribute "previous_id"' do
+  describe 'test attribute "_previous_id"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "_before_id"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -176,7 +176,7 @@ describe 'StationResultStation' do
     end
   end
 
-  describe 'test attribute "trial_date"' do
+  describe 'test attribute "timezone"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
