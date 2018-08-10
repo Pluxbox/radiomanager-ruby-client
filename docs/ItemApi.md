@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**current_item_post_structure**](ItemApi.md#current_item_post_structure) | **POST** /items/current/structure | Post a current playing item, keep structure
 [**current_item_post_timing**](ItemApi.md#current_item_post_timing) | **POST** /items/current/timing | Post a current playing item
 [**delete_item_by_id**](ItemApi.md#delete_item_by_id) | **DELETE** /items/{id} | Delete item by ID.
+[**get_current_item**](ItemApi.md#get_current_item) | **GET** /items/current | Get current Item
 [**get_item_by_id**](ItemApi.md#get_item_by_id) | **GET** /items/{id} | Get extended item details by ID.
 [**list_items**](ItemApi.md#list_items) | **GET** /items | Get a list of all the items currently in your station.
 [**playlist_post_structure**](ItemApi.md#playlist_post_structure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
@@ -234,6 +235,61 @@ Name | Type | Description  | Notes
 
 
 
+# **get_current_item**
+> ItemResult get_current_item(opts)
+
+Get current Item
+
+Get current Item
+
+### Example
+```ruby
+# load the gem
+require 'radiomanager_client'
+# setup authorization
+RadioManagerClient.configure do |config|
+  # Configure API key authorization: API Key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = RadioManagerClient::ItemApi.new
+
+opts = { 
+  lastplayed: true # BOOLEAN | Show last played item if there is no current item*(Optional)*
+}
+
+begin
+  #Get current Item
+  result = api_instance.get_current_item(opts)
+  p result
+rescue RadioManagerClient::ApiError => e
+  puts "Exception when calling ItemApi->get_current_item: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lastplayed** | **BOOLEAN**| Show last played item if there is no current item*(Optional)* | [optional] 
+
+### Return type
+
+[**ItemResult**](ItemResult.md)
+
+### Authorization
+
+[API Key](../README.md#API Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **get_item_by_id**
 > ItemResult get_item_by_id(id, opts)
 
@@ -325,6 +381,7 @@ opts = {
   user_draft_id: 789, # Integer | Search on User Draft ID *(Optional)*
   station_draft_id: 789, # Integer | Search on Station Draft ID *(Optional)*
   program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  external_id: "external_id_example", # String | Search on External ID *(Optional)*
   start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
   start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
   duration_min: 56, # Integer | Minimum duration (seconds) *(Optional)*
@@ -360,6 +417,7 @@ Name | Type | Description  | Notes
  **user_draft_id** | **Integer**| Search on User Draft ID *(Optional)* | [optional] 
  **station_draft_id** | **Integer**| Search on Station Draft ID *(Optional)* | [optional] 
  **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **external_id** | **String**| Search on External ID *(Optional)* | [optional] 
  **start_min** | **DateTime**| Minimum start date *(Optional)* | [optional] 
  **start_max** | **DateTime**| Maximum start date *(Optional)* | [optional] 
  **duration_min** | **Integer**| Minimum duration (seconds) *(Optional)* | [optional] 

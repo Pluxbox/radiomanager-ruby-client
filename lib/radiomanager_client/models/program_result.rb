@@ -51,6 +51,8 @@ module RadioManagerClient
 
     attr_accessor :pty_code_id
 
+    attr_accessor :genre
+
     attr_accessor :items
 
     attr_accessor :blocks
@@ -85,6 +87,7 @@ module RadioManagerClient
         :'recommended' => :'recommended',
         :'language' => :'language',
         :'pty_code_id' => :'pty_code_id',
+        :'genre' => :'genre',
         :'items' => :'items',
         :'blocks' => :'blocks',
         :'broadcasts' => :'broadcasts',
@@ -115,6 +118,7 @@ module RadioManagerClient
         :'recommended' => :'BOOLEAN',
         :'language' => :'String',
         :'pty_code_id' => :'Integer',
+        :'genre' => :'BroadcastRelationsGenre',
         :'items' => :'ProgramRelationsItems',
         :'blocks' => :'ProgramRelationsBlocks',
         :'broadcasts' => :'ProgramRelationsBroadcasts',
@@ -202,6 +206,10 @@ module RadioManagerClient
 
       if attributes.has_key?(:'pty_code_id')
         self.pty_code_id = attributes[:'pty_code_id']
+      end
+
+      if attributes.has_key?(:'genre')
+        self.genre = attributes[:'genre']
       end
 
       if attributes.has_key?(:'items')
@@ -296,6 +304,7 @@ module RadioManagerClient
           recommended == o.recommended &&
           language == o.language &&
           pty_code_id == o.pty_code_id &&
+          genre == o.genre &&
           items == o.items &&
           blocks == o.blocks &&
           broadcasts == o.broadcasts &&
@@ -313,7 +322,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, updated_at, created_at, deleted_at, _external_station_id, model_type_id, field_values, title, disabled, genre_id, description, short_name, medium_name, website, email, recommended, language, pty_code_id, items, blocks, broadcasts, presenters, tags, model_type].hash
+      [id, updated_at, created_at, deleted_at, _external_station_id, model_type_id, field_values, title, disabled, genre_id, description, short_name, medium_name, website, email, recommended, language, pty_code_id, genre, items, blocks, broadcasts, presenters, tags, model_type].hash
     end
 
     # Builds the object from hash

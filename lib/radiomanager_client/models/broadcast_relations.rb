@@ -15,6 +15,8 @@ require 'date'
 module RadioManagerClient
 
   class BroadcastRelations
+    attr_accessor :genre
+
     attr_accessor :items
 
     attr_accessor :blocks
@@ -31,6 +33,7 @@ module RadioManagerClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'genre' => :'genre',
         :'items' => :'items',
         :'blocks' => :'blocks',
         :'program' => :'program',
@@ -43,6 +46,7 @@ module RadioManagerClient
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'genre' => :'BroadcastRelationsGenre',
         :'items' => :'BroadcastRelationsItems',
         :'blocks' => :'BroadcastRelationsBlocks',
         :'program' => :'BlockRelationsProgram',
@@ -59,6 +63,10 @@ module RadioManagerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'genre')
+        self.genre = attributes[:'genre']
+      end
 
       if attributes.has_key?(:'items')
         self.items = attributes[:'items']
@@ -104,6 +112,7 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          genre == o.genre &&
           items == o.items &&
           blocks == o.blocks &&
           program == o.program &&
@@ -121,7 +130,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [items, blocks, program, tags, presenters, model_type].hash
+      [genre, items, blocks, program, tags, presenters, model_type].hash
     end
 
     # Builds the object from hash

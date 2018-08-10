@@ -345,10 +345,6 @@ module RadioManagerClient
         invalid_properties.push("invalid value for 'deleted_at', deleted_at cannot be nil.")
       end
 
-      if !@pty_code_id.nil? && @pty_code_id < 1
-        invalid_properties.push("invalid value for 'pty_code_id', must be greater than or equal to 1.")
-      end
-
       return invalid_properties
     end
 
@@ -361,7 +357,6 @@ module RadioManagerClient
       return false if @deleted_at.nil?
       repetition_type_validator = EnumAttributeValidator.new('String', ["1 week", "2 weeks", "4 weeks", "1 month"])
       return false unless repetition_type_validator.valid?(@repetition_type)
-      return false if !@pty_code_id.nil? && @pty_code_id < 1
       return true
     end
 
@@ -373,17 +368,6 @@ module RadioManagerClient
         fail ArgumentError, "invalid value for 'repetition_type', must be one of #{validator.allowable_values}."
       end
       @repetition_type = repetition_type
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] pty_code_id Value to be assigned
-    def pty_code_id=(pty_code_id)
-
-      if !pty_code_id.nil? && pty_code_id < 1
-        fail ArgumentError, "invalid value for 'pty_code_id', must be greater than or equal to 1."
-      end
-
-      @pty_code_id = pty_code_id
     end
 
     # Checks equality by comparing each attribute.

@@ -232,6 +232,58 @@ module RadioManagerClient
       return data, status_code, headers
     end
 
+    # Get current Item
+    # Get current Item
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :lastplayed Show last played item if there is no current item*(Optional)*
+    # @return [ItemResult]
+    def get_current_item(opts = {})
+      data, _status_code, _headers = get_current_item_with_http_info(opts)
+      return data
+    end
+
+    # Get current Item
+    # Get current Item
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :lastplayed Show last played item if there is no current item*(Optional)*
+    # @return [Array<(ItemResult, Fixnum, Hash)>] ItemResult data, response status code and response headers
+    def get_current_item_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: ItemApi.get_current_item ..."
+      end
+      # resource path
+      local_var_path = "/items/current"
+
+      # query parameters
+      query_params = {}
+      query_params[:'lastplayed'] = opts[:'lastplayed'] if !opts[:'lastplayed'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['API Key']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ItemResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ItemApi#get_current_item\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get extended item details by ID.
     # Read item by id.
     # @param id ID of Item **(Required)**
@@ -308,6 +360,7 @@ module RadioManagerClient
     # @option opts [Integer] :user_draft_id Search on User Draft ID *(Optional)*
     # @option opts [Integer] :station_draft_id Search on Station Draft ID *(Optional)*
     # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [String] :external_id Search on External ID *(Optional)*
     # @option opts [DateTime] :start_min Minimum start date *(Optional)*
     # @option opts [DateTime] :start_max Maximum start date *(Optional)*
     # @option opts [Integer] :duration_min Minimum duration (seconds) *(Optional)*
@@ -337,6 +390,7 @@ module RadioManagerClient
     # @option opts [Integer] :user_draft_id Search on User Draft ID *(Optional)*
     # @option opts [Integer] :station_draft_id Search on Station Draft ID *(Optional)*
     # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [String] :external_id Search on External ID *(Optional)*
     # @option opts [DateTime] :start_min Minimum start date *(Optional)*
     # @option opts [DateTime] :start_max Maximum start date *(Optional)*
     # @option opts [Integer] :duration_min Minimum duration (seconds) *(Optional)*
@@ -385,6 +439,7 @@ module RadioManagerClient
       query_params[:'user_draft_id'] = opts[:'user_draft_id'] if !opts[:'user_draft_id'].nil?
       query_params[:'station_draft_id'] = opts[:'station_draft_id'] if !opts[:'station_draft_id'].nil?
       query_params[:'program_id'] = opts[:'program_id'] if !opts[:'program_id'].nil?
+      query_params[:'external_id'] = opts[:'external_id'] if !opts[:'external_id'].nil?
       query_params[:'start-min'] = opts[:'start_min'] if !opts[:'start_min'].nil?
       query_params[:'start-max'] = opts[:'start_max'] if !opts[:'start_max'].nil?
       query_params[:'duration-min'] = opts[:'duration_min'] if !opts[:'duration_min'].nil?

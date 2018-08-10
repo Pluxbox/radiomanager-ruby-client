@@ -65,6 +65,8 @@ module RadioManagerClient
 
     attr_accessor :timezone
 
+    attr_accessor :start_days
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -93,7 +95,8 @@ module RadioManagerClient
         :'pty_code' => :'pty_code',
         :'pty_type' => :'pty_type',
         :'station_key' => :'station_key',
-        :'timezone' => :'timezone'
+        :'timezone' => :'timezone',
+        :'start_days' => :'start_days'
       }
     end
 
@@ -124,7 +127,8 @@ module RadioManagerClient
         :'pty_code' => :'Integer',
         :'pty_type' => :'String',
         :'station_key' => :'String',
-        :'timezone' => :'String'
+        :'timezone' => :'String',
+        :'start_days' => :'StationResultStationStartDays'
       }
     end
 
@@ -238,6 +242,10 @@ module RadioManagerClient
         self.timezone = attributes[:'timezone']
       end
 
+      if attributes.has_key?(:'start_days')
+        self.start_days = attributes[:'start_days']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -282,7 +290,8 @@ module RadioManagerClient
           pty_code == o.pty_code &&
           pty_type == o.pty_type &&
           station_key == o.station_key &&
-          timezone == o.timezone
+          timezone == o.timezone &&
+          start_days == o.start_days
     end
 
     # @see the `==` method
@@ -294,7 +303,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, created_at, updated_at, system_name, short_name, medium_name, website, email, keywords, description, sms, telephone, genre_id, language, active, logo_rectangle, logo_128x128, logo_320x320, logo_600x600, pay_off, pty_code, pty_type, station_key, timezone].hash
+      [id, name, created_at, updated_at, system_name, short_name, medium_name, website, email, keywords, description, sms, telephone, genre_id, language, active, logo_rectangle, logo_128x128, logo_320x320, logo_600x600, pay_off, pty_code, pty_type, station_key, timezone, start_days].hash
     end
 
     # Builds the object from hash

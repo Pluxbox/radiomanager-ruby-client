@@ -571,26 +571,22 @@ module RadioManagerClient
       return data, status_code, headers
     end
 
-    # Print Broadcast by id
-    # Print Broadcast by id
+    # Print broadcast by id with template
+    # Print broadcast by id with template
     # @param id ID of Broadcast **(Required)**
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-    # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-    # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [Integer] :template_id Search on template ID *(Optional)*
     # @return [EPGResults]
     def print_broadcast_by_id(id, opts = {})
       data, _status_code, _headers = print_broadcast_by_id_with_http_info(id, opts)
       return data
     end
 
-    # Print Broadcast by id
-    # Print Broadcast by id
+    # Print broadcast by id with template
+    # Print broadcast by id with template
     # @param id ID of Broadcast **(Required)**
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :program_id Search on Program ID *(Optional)* &#x60;(Relation)&#x60;
-    # @option opts [Integer] :presenter_id Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60;
-    # @option opts [Integer] :tag_id Search on Tag ID *(Optional)* &#x60;(Relation)&#x60;
+    # @option opts [Integer] :template_id Search on template ID *(Optional)*
     # @return [Array<(EPGResults, Fixnum, Hash)>] EPGResults data, response status code and response headers
     def print_broadcast_by_id_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -609,9 +605,7 @@ module RadioManagerClient
 
       # query parameters
       query_params = {}
-      query_params[:'program_id'] = opts[:'program_id'] if !opts[:'program_id'].nil?
-      query_params[:'presenter_id'] = opts[:'presenter_id'] if !opts[:'presenter_id'].nil?
-      query_params[:'tag_id'] = opts[:'tag_id'] if !opts[:'tag_id'].nil?
+      query_params[:'template_id'] = opts[:'template_id'] if !opts[:'template_id'].nil?
 
       # header parameters
       header_params = {}

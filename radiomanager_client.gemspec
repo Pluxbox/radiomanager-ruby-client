@@ -17,7 +17,7 @@ require "radiomanager_client/version"
 
 Gem::Specification.new do |s|
   s.name        = "radiomanager_client"
-  s.version     = "1.1.6-dev"
+  s.version     = "1.1.7-dev"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Pluxbox"]
   s.email       = ["support@pluxbox.com"]

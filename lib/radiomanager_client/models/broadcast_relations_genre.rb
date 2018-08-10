@@ -14,45 +14,33 @@ require 'date'
 
 module RadioManagerClient
 
-  class ProgramRelations
-    attr_accessor :genre
+  class BroadcastRelationsGenre
+    attr_accessor :href
 
-    attr_accessor :items
+    attr_accessor :model
 
-    attr_accessor :blocks
+    attr_accessor :operation
 
-    attr_accessor :broadcasts
-
-    attr_accessor :presenters
-
-    attr_accessor :tags
-
-    attr_accessor :model_type
+    attr_accessor :params
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'genre' => :'genre',
-        :'items' => :'items',
-        :'blocks' => :'blocks',
-        :'broadcasts' => :'broadcasts',
-        :'presenters' => :'presenters',
-        :'tags' => :'tags',
-        :'model_type' => :'model_type'
+        :'href' => :'href',
+        :'model' => :'model',
+        :'operation' => :'operation',
+        :'params' => :'params'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'genre' => :'BroadcastRelationsGenre',
-        :'items' => :'ProgramRelationsItems',
-        :'blocks' => :'ProgramRelationsBlocks',
-        :'broadcasts' => :'ProgramRelationsBroadcasts',
-        :'presenters' => :'ProgramRelationsPresenters',
-        :'tags' => :'ProgramRelationsTags',
-        :'model_type' => :'BroadcastRelationsModelType'
+        :'href' => :'String',
+        :'model' => :'String',
+        :'operation' => :'String',
+        :'params' => :'BlockRelationsBroadcastParams'
       }
     end
 
@@ -64,32 +52,20 @@ module RadioManagerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'genre')
-        self.genre = attributes[:'genre']
+      if attributes.has_key?(:'href')
+        self.href = attributes[:'href']
       end
 
-      if attributes.has_key?(:'items')
-        self.items = attributes[:'items']
+      if attributes.has_key?(:'model')
+        self.model = attributes[:'model']
       end
 
-      if attributes.has_key?(:'blocks')
-        self.blocks = attributes[:'blocks']
+      if attributes.has_key?(:'operation')
+        self.operation = attributes[:'operation']
       end
 
-      if attributes.has_key?(:'broadcasts')
-        self.broadcasts = attributes[:'broadcasts']
-      end
-
-      if attributes.has_key?(:'presenters')
-        self.presenters = attributes[:'presenters']
-      end
-
-      if attributes.has_key?(:'tags')
-        self.tags = attributes[:'tags']
-      end
-
-      if attributes.has_key?(:'model_type')
-        self.model_type = attributes[:'model_type']
+      if attributes.has_key?(:'params')
+        self.params = attributes[:'params']
       end
 
     end
@@ -112,13 +88,10 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          genre == o.genre &&
-          items == o.items &&
-          blocks == o.blocks &&
-          broadcasts == o.broadcasts &&
-          presenters == o.presenters &&
-          tags == o.tags &&
-          model_type == o.model_type
+          href == o.href &&
+          model == o.model &&
+          operation == o.operation &&
+          params == o.params
     end
 
     # @see the `==` method
@@ -130,7 +103,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [genre, items, blocks, broadcasts, presenters, tags, model_type].hash
+      [href, model, operation, params].hash
     end
 
     # Builds the object from hash

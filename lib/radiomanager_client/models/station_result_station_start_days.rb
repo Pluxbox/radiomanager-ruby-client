@@ -14,45 +14,45 @@ require 'date'
 
 module RadioManagerClient
 
-  class ProgramRelations
-    attr_accessor :genre
+  class StationResultStationStartDays
+    attr_accessor :monday
 
-    attr_accessor :items
+    attr_accessor :tuesday
 
-    attr_accessor :blocks
+    attr_accessor :wednesday
 
-    attr_accessor :broadcasts
+    attr_accessor :thursday
 
-    attr_accessor :presenters
+    attr_accessor :friday
 
-    attr_accessor :tags
+    attr_accessor :saturday
 
-    attr_accessor :model_type
+    attr_accessor :sunday
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'genre' => :'genre',
-        :'items' => :'items',
-        :'blocks' => :'blocks',
-        :'broadcasts' => :'broadcasts',
-        :'presenters' => :'presenters',
-        :'tags' => :'tags',
-        :'model_type' => :'model_type'
+        :'monday' => :'monday',
+        :'tuesday' => :'tuesday',
+        :'wednesday' => :'wednesday',
+        :'thursday' => :'thursday',
+        :'friday' => :'friday',
+        :'saturday' => :'saturday',
+        :'sunday' => :'sunday'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'genre' => :'BroadcastRelationsGenre',
-        :'items' => :'ProgramRelationsItems',
-        :'blocks' => :'ProgramRelationsBlocks',
-        :'broadcasts' => :'ProgramRelationsBroadcasts',
-        :'presenters' => :'ProgramRelationsPresenters',
-        :'tags' => :'ProgramRelationsTags',
-        :'model_type' => :'BroadcastRelationsModelType'
+        :'monday' => :'String',
+        :'tuesday' => :'String',
+        :'wednesday' => :'String',
+        :'thursday' => :'String',
+        :'friday' => :'String',
+        :'saturday' => :'String',
+        :'sunday' => :'String'
       }
     end
 
@@ -64,32 +64,32 @@ module RadioManagerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'genre')
-        self.genre = attributes[:'genre']
+      if attributes.has_key?(:'monday')
+        self.monday = attributes[:'monday']
       end
 
-      if attributes.has_key?(:'items')
-        self.items = attributes[:'items']
+      if attributes.has_key?(:'tuesday')
+        self.tuesday = attributes[:'tuesday']
       end
 
-      if attributes.has_key?(:'blocks')
-        self.blocks = attributes[:'blocks']
+      if attributes.has_key?(:'wednesday')
+        self.wednesday = attributes[:'wednesday']
       end
 
-      if attributes.has_key?(:'broadcasts')
-        self.broadcasts = attributes[:'broadcasts']
+      if attributes.has_key?(:'thursday')
+        self.thursday = attributes[:'thursday']
       end
 
-      if attributes.has_key?(:'presenters')
-        self.presenters = attributes[:'presenters']
+      if attributes.has_key?(:'friday')
+        self.friday = attributes[:'friday']
       end
 
-      if attributes.has_key?(:'tags')
-        self.tags = attributes[:'tags']
+      if attributes.has_key?(:'saturday')
+        self.saturday = attributes[:'saturday']
       end
 
-      if attributes.has_key?(:'model_type')
-        self.model_type = attributes[:'model_type']
+      if attributes.has_key?(:'sunday')
+        self.sunday = attributes[:'sunday']
       end
 
     end
@@ -112,13 +112,13 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          genre == o.genre &&
-          items == o.items &&
-          blocks == o.blocks &&
-          broadcasts == o.broadcasts &&
-          presenters == o.presenters &&
-          tags == o.tags &&
-          model_type == o.model_type
+          monday == o.monday &&
+          tuesday == o.tuesday &&
+          wednesday == o.wednesday &&
+          thursday == o.thursday &&
+          friday == o.friday &&
+          saturday == o.saturday &&
+          sunday == o.sunday
     end
 
     # @see the `==` method
@@ -130,7 +130,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [genre, items, blocks, broadcasts, presenters, tags, model_type].hash
+      [monday, tuesday, wednesday, thursday, friday, saturday, sunday].hash
     end
 
     # Builds the object from hash
