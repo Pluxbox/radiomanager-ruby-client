@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 
 # **print_broadcast_by_id**
-> EPGResults print_broadcast_by_id(id, opts)
+> String print_broadcast_by_id(id, opts)
 
 Print broadcast by id with template
 
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EPGResults**](EPGResults.md)
+**String**
 
 ### Authorization
 
