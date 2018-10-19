@@ -47,7 +47,7 @@ module RadioManagerClient
         :'updated_at' => :'DateTime',
         :'created_at' => :'DateTime',
         :'deleted_at' => :'DateTime',
-        :'item' => :'Array<Item>',
+        :'item' => :'Item',
         :'_external_station_id' => :'Integer'
       }
     end
@@ -77,9 +77,7 @@ module RadioManagerClient
       end
 
       if attributes.has_key?(:'item')
-        if (value = attributes[:'item']).is_a?(Array)
-          self.item = value
-        end
+        self.item = attributes[:'item']
       end
 
       if attributes.has_key?(:'_external_station_id')

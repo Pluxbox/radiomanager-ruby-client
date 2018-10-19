@@ -17,6 +17,8 @@ module RadioManagerClient
   class Data1
     attr_accessor :start
 
+    attr_accessor :allow_playlist_past
+
     attr_accessor :items
 
 
@@ -24,6 +26,7 @@ module RadioManagerClient
     def self.attribute_map
       {
         :'start' => :'start',
+        :'allow_playlist_past' => :'allow_playlist_past',
         :'items' => :'items'
       }
     end
@@ -32,6 +35,7 @@ module RadioManagerClient
     def self.swagger_types
       {
         :'start' => :'DateTime',
+        :'allow_playlist_past' => :'Integer',
         :'items' => :'Array<ImportItem>'
       }
     end
@@ -46,6 +50,10 @@ module RadioManagerClient
 
       if attributes.has_key?(:'start')
         self.start = attributes[:'start']
+      end
+
+      if attributes.has_key?(:'allow_playlist_past')
+        self.allow_playlist_past = attributes[:'allow_playlist_past']
       end
 
       if attributes.has_key?(:'items')
@@ -75,6 +83,7 @@ module RadioManagerClient
       return true if self.equal?(o)
       self.class == o.class &&
           start == o.start &&
+          allow_playlist_past == o.allow_playlist_past &&
           items == o.items
     end
 
@@ -87,7 +96,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start, items].hash
+      [start, allow_playlist_past, items].hash
     end
 
     # Builds the object from hash
