@@ -14,41 +14,49 @@ require 'date'
 
 module RadioManagerClient
 
-  class CampaignOutputOnly
-    attr_accessor :id
+  class CampaignTemplateItem
+    attr_accessor :model_type_id
 
-    attr_accessor :updated_at
+    attr_accessor :external_id
 
-    attr_accessor :created_at
+    attr_accessor :field_values
 
-    attr_accessor :deleted_at
+    attr_accessor :title
 
-    attr_accessor :item
+    attr_accessor :duration
 
-    attr_accessor :_external_station_id
+    attr_accessor :recommended
+
+    attr_accessor :static_start
+
+    attr_accessor :_deltas
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'updated_at' => :'updated_at',
-        :'created_at' => :'created_at',
-        :'deleted_at' => :'deleted_at',
-        :'item' => :'item',
-        :'_external_station_id' => :'_external_station_id'
+        :'model_type_id' => :'model_type_id',
+        :'external_id' => :'external_id',
+        :'field_values' => :'field_values',
+        :'title' => :'title',
+        :'duration' => :'duration',
+        :'recommended' => :'recommended',
+        :'static_start' => :'static_start',
+        :'_deltas' => :'_deltas'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'Integer',
-        :'updated_at' => :'DateTime',
-        :'created_at' => :'DateTime',
-        :'deleted_at' => :'DateTime',
-        :'item' => :'CampaignTemplateItem',
-        :'_external_station_id' => :'Integer'
+        :'model_type_id' => :'Integer',
+        :'external_id' => :'String',
+        :'field_values' => :'Object',
+        :'title' => :'String',
+        :'duration' => :'Integer',
+        :'recommended' => :'BOOLEAN',
+        :'static_start' => :'BOOLEAN',
+        :'_deltas' => :'Object'
       }
     end
 
@@ -60,28 +68,36 @@ module RadioManagerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'model_type_id')
+        self.model_type_id = attributes[:'model_type_id']
       end
 
-      if attributes.has_key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
+      if attributes.has_key?(:'external_id')
+        self.external_id = attributes[:'external_id']
       end
 
-      if attributes.has_key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.has_key?(:'field_values')
+        self.field_values = attributes[:'field_values']
       end
 
-      if attributes.has_key?(:'deleted_at')
-        self.deleted_at = attributes[:'deleted_at']
+      if attributes.has_key?(:'title')
+        self.title = attributes[:'title']
       end
 
-      if attributes.has_key?(:'item')
-        self.item = attributes[:'item']
+      if attributes.has_key?(:'duration')
+        self.duration = attributes[:'duration']
       end
 
-      if attributes.has_key?(:'_external_station_id')
-        self._external_station_id = attributes[:'_external_station_id']
+      if attributes.has_key?(:'recommended')
+        self.recommended = attributes[:'recommended']
+      end
+
+      if attributes.has_key?(:'static_start')
+        self.static_start = attributes[:'static_start']
+      end
+
+      if attributes.has_key?(:'_deltas')
+        self._deltas = attributes[:'_deltas']
       end
 
     end
@@ -90,32 +106,12 @@ module RadioManagerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push("invalid value for 'id', id cannot be nil.")
-      end
-
-      if @updated_at.nil?
-        invalid_properties.push("invalid value for 'updated_at', updated_at cannot be nil.")
-      end
-
-      if @created_at.nil?
-        invalid_properties.push("invalid value for 'created_at', created_at cannot be nil.")
-      end
-
-      if @deleted_at.nil?
-        invalid_properties.push("invalid value for 'deleted_at', deleted_at cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @updated_at.nil?
-      return false if @created_at.nil?
-      return false if @deleted_at.nil?
       return true
     end
 
@@ -124,12 +120,14 @@ module RadioManagerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          updated_at == o.updated_at &&
-          created_at == o.created_at &&
-          deleted_at == o.deleted_at &&
-          item == o.item &&
-          _external_station_id == o._external_station_id
+          model_type_id == o.model_type_id &&
+          external_id == o.external_id &&
+          field_values == o.field_values &&
+          title == o.title &&
+          duration == o.duration &&
+          recommended == o.recommended &&
+          static_start == o.static_start &&
+          _deltas == o._deltas
     end
 
     # @see the `==` method
@@ -141,7 +139,7 @@ module RadioManagerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, updated_at, created_at, deleted_at, item, _external_station_id].hash
+      [model_type_id, external_id, field_values, title, duration, recommended, static_start, _deltas].hash
     end
 
     # Builds the object from hash

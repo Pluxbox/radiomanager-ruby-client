@@ -74,7 +74,7 @@ module RadioManagerClient
         :'updated_at' => :'DateTime',
         :'created_at' => :'DateTime',
         :'deleted_at' => :'DateTime',
-        :'item' => :'Item',
+        :'item' => :'CampaignTemplateItem',
         :'_external_station_id' => :'Integer',
         :'model_type_id' => :'Integer',
         :'field_values' => :'Object',

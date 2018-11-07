@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.1.9-dev
+- Package version: 1.1.10-dev
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::CampaignRelationsItems](docs/CampaignRelationsItems.md)
  - [RadioManagerClient::CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
  - [RadioManagerClient::CampaignResults](docs/CampaignResults.md)
+ - [RadioManagerClient::CampaignTemplateItem](docs/CampaignTemplateItem.md)
  - [RadioManagerClient::Contact](docs/Contact.md)
  - [RadioManagerClient::ContactOutputOnly](docs/ContactOutputOnly.md)
  - [RadioManagerClient::ContactRelations](docs/ContactRelations.md)
