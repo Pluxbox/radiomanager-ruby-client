@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.1.10-dev
+- Package version: 1.1.11-dev
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -87,8 +87,10 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::ItemApi* | [**get_current_item**](docs/ItemApi.md#get_current_item) | **GET** /items/current | Get current Item
 *RadioManagerClient::ItemApi* | [**get_item_by_id**](docs/ItemApi.md#get_item_by_id) | **GET** /items/{id} | Get extended item details by ID.
 *RadioManagerClient::ItemApi* | [**list_items**](docs/ItemApi.md#list_items) | **GET** /items | Get a list of all the items currently in your station.
+*RadioManagerClient::ItemApi* | [**playlist_post_merge**](docs/ItemApi.md#playlist_post_merge) | **POST** /items/playlist/merge | Post a playlist, do not remove previously imported items
 *RadioManagerClient::ItemApi* | [**playlist_post_structure**](docs/ItemApi.md#playlist_post_structure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
 *RadioManagerClient::ItemApi* | [**playlist_post_timing**](docs/ItemApi.md#playlist_post_timing) | **POST** /items/playlist/timing | Post a playlist
+*RadioManagerClient::ItemApi* | [**stop_current_item**](docs/ItemApi.md#stop_current_item) | **POST** /items/stopcurrent | Stop an Item
 *RadioManagerClient::ItemApi* | [**update_item_by_id**](docs/ItemApi.md#update_item_by_id) | **PATCH** /items/{id} | Update extended item details by ID.
 *RadioManagerClient::ModelTypeApi* | [**get_model_type_by_id**](docs/ModelTypeApi.md#get_model_type_by_id) | **GET** /model_types/{id} | Get modelType by id
 *RadioManagerClient::ModelTypeApi* | [**list_model_types**](docs/ModelTypeApi.md#list_model_types) | **GET** /model_types | Get all modelTypes.
@@ -161,6 +163,8 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ContactResults](docs/ContactResults.md)
  - [RadioManagerClient::Data](docs/Data.md)
  - [RadioManagerClient::Data1](docs/Data1.md)
+ - [RadioManagerClient::Data2](docs/Data2.md)
+ - [RadioManagerClient::Data3](docs/Data3.md)
  - [RadioManagerClient::EPGResults](docs/EPGResults.md)
  - [RadioManagerClient::Forbidden](docs/Forbidden.md)
  - [RadioManagerClient::Genre](docs/Genre.md)
