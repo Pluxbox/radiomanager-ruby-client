@@ -28,5 +28,8 @@ Name | Type | Description | Notes
 **pty_type** | **String** |  | [optional] 
 **station_key** | **String** |  | [optional] 
 **timezone** | **String** |  | [optional] 
+**metadataradio_organisation** | **String** |  | [optional] 
+**metadataradio_station_id** | **String** |  | [optional] 
+**start_days** | [**StationResultStationStartDays**](StationResultStationStartDays.md) |  | [optional] 
 
 

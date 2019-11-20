@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **updated_at** | **DateTime** |  | 
 **created_at** | **DateTime** |  | 
 **deleted_at** | **DateTime** |  | 
-**item** | [**Array&lt;Item&gt;**](Item.md) |  | [optional] 
+**item** | [**CampaignTemplateItem**](CampaignTemplateItem.md) |  | [optional] 
 **_external_station_id** | **Integer** |  | [optional] 
 **model_type_id** | **Integer** |  | 
 **field_values** | **Object** |  | [optional] 

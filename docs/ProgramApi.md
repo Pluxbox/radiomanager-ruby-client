@@ -207,6 +207,7 @@ opts = {
   genre_id: 789, # Integer | Search on Genre ID *(Optional)*
   block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
   item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  disabled: 56, # Integer | Search on Disabled status *(Optional)*
   limit: 789, # Integer | Results per page *(Optional)*
   order_by: "order_by_example", # String | Field to order the results *(Optional)*
   order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
@@ -234,6 +235,7 @@ Name | Type | Description  | Notes
  **genre_id** | **Integer**| Search on Genre ID *(Optional)* | [optional] 
  **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **disabled** | **Integer**| Search on Disabled status *(Optional)* | [optional] 
  **limit** | **Integer**| Results per page *(Optional)* | [optional] 
  **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
  **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 

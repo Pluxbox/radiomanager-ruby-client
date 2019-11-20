@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**get_next_broadcast**](BroadcastApi.md#get_next_broadcast) | **GET** /broadcasts/next | Get next Broadcast
 [**get_weekly_epg**](BroadcastApi.md#get_weekly_epg) | **GET** /broadcasts/epg/weekly | Get weekly EPG
 [**list_broadcasts**](BroadcastApi.md#list_broadcasts) | **GET** /broadcasts | Get all broadcasts.
-[**print_broadcast_by_id**](BroadcastApi.md#print_broadcast_by_id) | **GET** /broadcasts/print/{id} | Print Broadcast by id
+[**print_broadcast_by_id**](BroadcastApi.md#print_broadcast_by_id) | **GET** /broadcasts/print/{id} | Print broadcast by id with template
 [**update_broadcast_by_id**](BroadcastApi.md#update_broadcast_by_id) | **PATCH** /broadcasts/{id} | Update broadcast by id
 
 
@@ -546,11 +546,11 @@ Name | Type | Description  | Notes
 
 
 # **print_broadcast_by_id**
-> EPGResults print_broadcast_by_id(id, opts)
+> String print_broadcast_by_id(id, opts)
 
-Print Broadcast by id
+Print broadcast by id with template
 
-Print Broadcast by id
+Print broadcast by id with template
 
 ### Example
 ```ruby
@@ -569,13 +569,11 @@ api_instance = RadioManagerClient::BroadcastApi.new
 id = 789 # Integer | ID of Broadcast **(Required)**
 
 opts = { 
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  presenter_id: 789, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
-  tag_id: 789 # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  template_id: 789 # Integer | Search on template ID *(Optional)*
 }
 
 begin
-  #Print Broadcast by id
+  #Print broadcast by id with template
   result = api_instance.print_broadcast_by_id(id, opts)
   p result
 rescue RadioManagerClient::ApiError => e
@@ -588,13 +586,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| ID of Broadcast **(Required)** | 
- **program_id** | **Integer**| Search on Program ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **presenter_id** | **Integer**| Search on Presenter ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
- **tag_id** | **Integer**| Search on Tag ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **template_id** | **Integer**| Search on template ID *(Optional)* | [optional] 
 
 ### Return type
 
-[**EPGResults**](EPGResults.md)
+**String**
 
 ### Authorization
 

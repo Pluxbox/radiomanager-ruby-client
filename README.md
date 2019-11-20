@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.1.7
+- Package version: 1.1.12
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
@@ -66,7 +66,7 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::BroadcastApi* | [**get_next_broadcast**](docs/BroadcastApi.md#get_next_broadcast) | **GET** /broadcasts/next | Get next Broadcast
 *RadioManagerClient::BroadcastApi* | [**get_weekly_epg**](docs/BroadcastApi.md#get_weekly_epg) | **GET** /broadcasts/epg/weekly | Get weekly EPG
 *RadioManagerClient::BroadcastApi* | [**list_broadcasts**](docs/BroadcastApi.md#list_broadcasts) | **GET** /broadcasts | Get all broadcasts.
-*RadioManagerClient::BroadcastApi* | [**print_broadcast_by_id**](docs/BroadcastApi.md#print_broadcast_by_id) | **GET** /broadcasts/print/{id} | Print Broadcast by id
+*RadioManagerClient::BroadcastApi* | [**print_broadcast_by_id**](docs/BroadcastApi.md#print_broadcast_by_id) | **GET** /broadcasts/print/{id} | Print broadcast by id with template
 *RadioManagerClient::BroadcastApi* | [**update_broadcast_by_id**](docs/BroadcastApi.md#update_broadcast_by_id) | **PATCH** /broadcasts/{id} | Update broadcast by id
 *RadioManagerClient::CampaignApi* | [**create_campaign**](docs/CampaignApi.md#create_campaign) | **POST** /campaigns | Create campaign.
 *RadioManagerClient::CampaignApi* | [**delete_campaign_by_id**](docs/CampaignApi.md#delete_campaign_by_id) | **DELETE** /campaigns/{id} | Delete campaign by id
@@ -87,8 +87,10 @@ Class | Method | HTTP request | Description
 *RadioManagerClient::ItemApi* | [**get_current_item**](docs/ItemApi.md#get_current_item) | **GET** /items/current | Get current Item
 *RadioManagerClient::ItemApi* | [**get_item_by_id**](docs/ItemApi.md#get_item_by_id) | **GET** /items/{id} | Get extended item details by ID.
 *RadioManagerClient::ItemApi* | [**list_items**](docs/ItemApi.md#list_items) | **GET** /items | Get a list of all the items currently in your station.
+*RadioManagerClient::ItemApi* | [**playlist_post_merge**](docs/ItemApi.md#playlist_post_merge) | **POST** /items/playlist/merge | Post a playlist, do not remove previously imported items
 *RadioManagerClient::ItemApi* | [**playlist_post_structure**](docs/ItemApi.md#playlist_post_structure) | **POST** /items/playlist/structure | Post a playlist, keep current structure
 *RadioManagerClient::ItemApi* | [**playlist_post_timing**](docs/ItemApi.md#playlist_post_timing) | **POST** /items/playlist/timing | Post a playlist
+*RadioManagerClient::ItemApi* | [**stop_current_item**](docs/ItemApi.md#stop_current_item) | **POST** /items/stopcurrent | Stop an Item
 *RadioManagerClient::ItemApi* | [**update_item_by_id**](docs/ItemApi.md#update_item_by_id) | **PATCH** /items/{id} | Update extended item details by ID.
 *RadioManagerClient::ModelTypeApi* | [**get_model_type_by_id**](docs/ModelTypeApi.md#get_model_type_by_id) | **GET** /model_types/{id} | Get modelType by id
 *RadioManagerClient::ModelTypeApi* | [**list_model_types**](docs/ModelTypeApi.md#list_model_types) | **GET** /model_types | Get all modelTypes.
@@ -138,6 +140,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
  - [RadioManagerClient::BroadcastRelations](docs/BroadcastRelations.md)
  - [RadioManagerClient::BroadcastRelationsBlocks](docs/BroadcastRelationsBlocks.md)
+ - [RadioManagerClient::BroadcastRelationsGenre](docs/BroadcastRelationsGenre.md)
  - [RadioManagerClient::BroadcastRelationsItems](docs/BroadcastRelationsItems.md)
  - [RadioManagerClient::BroadcastRelationsItemsParams](docs/BroadcastRelationsItemsParams.md)
  - [RadioManagerClient::BroadcastRelationsModelType](docs/BroadcastRelationsModelType.md)
@@ -150,6 +153,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::CampaignRelationsItems](docs/CampaignRelationsItems.md)
  - [RadioManagerClient::CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
  - [RadioManagerClient::CampaignResults](docs/CampaignResults.md)
+ - [RadioManagerClient::CampaignTemplateItem](docs/CampaignTemplateItem.md)
  - [RadioManagerClient::Contact](docs/Contact.md)
  - [RadioManagerClient::ContactOutputOnly](docs/ContactOutputOnly.md)
  - [RadioManagerClient::ContactRelations](docs/ContactRelations.md)
@@ -159,6 +163,8 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ContactResults](docs/ContactResults.md)
  - [RadioManagerClient::Data](docs/Data.md)
  - [RadioManagerClient::Data1](docs/Data1.md)
+ - [RadioManagerClient::Data2](docs/Data2.md)
+ - [RadioManagerClient::Data3](docs/Data3.md)
  - [RadioManagerClient::EPGResults](docs/EPGResults.md)
  - [RadioManagerClient::Forbidden](docs/Forbidden.md)
  - [RadioManagerClient::Genre](docs/Genre.md)
@@ -220,6 +226,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::RelationsPlaceholder](docs/RelationsPlaceholder.md)
  - [RadioManagerClient::StationResult](docs/StationResult.md)
  - [RadioManagerClient::StationResultStation](docs/StationResultStation.md)
+ - [RadioManagerClient::StationResultStationStartDays](docs/StationResultStationStartDays.md)
  - [RadioManagerClient::Story](docs/Story.md)
  - [RadioManagerClient::StoryInputOnly](docs/StoryInputOnly.md)
  - [RadioManagerClient::StoryOutputOnly](docs/StoryOutputOnly.md)

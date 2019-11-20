@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **field_values** | **Object** |  | [optional] 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**tags** | [**StoryRelationsTags**](StoryRelationsTags.md) |  | [optional] 
+**tags** | [**StoryRelationsTags**](StoryRelationsTags.md) |  | 
 **items** | [**StoryRelationsItems**](StoryRelationsItems.md) |  | [optional] 
 **model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
 
