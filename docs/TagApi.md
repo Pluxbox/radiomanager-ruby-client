@@ -1,6 +1,6 @@
 # RadioManagerClient::TagApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**update_tag_by_id**](TagApi.md#update_tag_by_id) | **PATCH** /tags/{id} | Update tag by id
 
 
-# **create_tag**
+
+## create_tag
+
 > PostSuccess create_tag(data)
 
 Create tag.
@@ -19,21 +21,20 @@ Create tag.
 Create tag.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::TagApi.new
-
 data = RadioManagerClient::TagDataInput.new # TagDataInput | Data **(Required)**
-
 
 begin
   #Create tag.
@@ -46,6 +47,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**TagDataInput**](TagDataInput.md)| Data **(Required)** | 
@@ -56,16 +58,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_tag_by_id
 
-# **delete_tag_by_id**
 > Success delete_tag_by_id(id)
 
 Delete tag by id
@@ -73,21 +75,20 @@ Delete tag by id
 Delete tag by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::TagApi.new
-
-id = 789 # Integer | ID of Tag **(Required)**
-
+id = 0 # Integer | ID of Tag **(Required)**
 
 begin
   #Delete tag by id
@@ -100,9 +101,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Tag **(Required)** | 
+ **id** | **Integer**| ID of Tag **(Required)** | [default to 0]
 
 ### Return type
 
@@ -110,16 +112,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_tag_by_id
 
-# **get_tag_by_id**
 > TagResult get_tag_by_id(id, opts)
 
 Get tags by id
@@ -127,23 +129,22 @@ Get tags by id
 Get tags by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::TagApi.new
-
-id = 789 # Integer | ID of Tag **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Tag **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -157,9 +158,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Tag **(Required)** | 
+ **id** | **Integer**| ID of Tag **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -168,16 +170,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_tags
 
-# **list_tags**
 > TagResults list_tags(opts)
 
 Get a list of all the tags currently in your station.
@@ -185,29 +187,29 @@ Get a list of all the tags currently in your station.
 Get a list of all the tags currently in your station. This feature supports pagination and will give a maximum results of 50 tags back.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::TagApi.new
-
-opts = { 
-  page: 789, # Integer | Current page *(Optional)*
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  contact_id: 789, # Integer | Search on Contact ID *(Optional)* `(Relation)`
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+opts = {
+  page: 56, # Integer | Current page *(Optional)*
+  program_id: 56, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  item_id: 56, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  broadcast_id: 56, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  contact_id: 56, # Integer | Search on Contact ID *(Optional)* `(Relation)`
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -220,6 +222,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -239,16 +242,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_tag_by_id
 
-# **update_tag_by_id**
 > Success update_tag_by_id(id, opts)
 
 Update tag by id
@@ -256,22 +259,21 @@ Update tag by id
 Update tag by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::TagApi.new
-
-id = 789 # Integer | ID of Tag **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Tag **(Required)**
+opts = {
   data: RadioManagerClient::TagDataInput.new # TagDataInput | Data *(Optional)*
 }
 
@@ -286,9 +288,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Tag **(Required)** | 
+ **id** | **Integer**| ID of Tag **(Required)** | [default to 0]
  **data** | [**TagDataInput**](TagDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -297,12 +300,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

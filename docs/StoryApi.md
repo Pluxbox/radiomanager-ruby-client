@@ -1,6 +1,6 @@
 # RadioManagerClient::StoryApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**update_story_by_id**](StoryApi.md#update_story_by_id) | **PATCH** /stories/{id} | Update story by id
 
 
-# **create_story**
+
+## create_story
+
 > PostSuccess create_story(data)
 
 Create story.
@@ -19,21 +21,20 @@ Create story.
 Create story.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StoryApi.new
-
 data = RadioManagerClient::StoryDataInput.new # StoryDataInput | Data **(Required)**
-
 
 begin
   #Create story.
@@ -46,6 +47,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**StoryDataInput**](StoryDataInput.md)| Data **(Required)** | 
@@ -56,16 +58,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_story_by_id
 
-# **delete_story_by_id**
 > Success delete_story_by_id(id)
 
 Delete story by id
@@ -73,21 +75,20 @@ Delete story by id
 Delete story by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StoryApi.new
-
-id = 789 # Integer | ID of Story **(Required)**
-
+id = 0 # Integer | ID of Story **(Required)**
 
 begin
   #Delete story by id
@@ -100,9 +101,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Story **(Required)** | 
+ **id** | **Integer**| ID of Story **(Required)** | [default to 0]
 
 ### Return type
 
@@ -110,16 +112,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_story_by_id
 
-# **get_story_by_id**
 > StoryResult get_story_by_id(id, opts)
 
 Get story by id
@@ -127,23 +129,22 @@ Get story by id
 Get story by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StoryApi.new
-
-id = 789 # Integer | ID of Story **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Story **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -157,9 +158,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Story **(Required)** | 
+ **id** | **Integer**| ID of Story **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -168,16 +170,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_stories
 
-# **list_stories**
 > StoryResults list_stories(opts)
 
 Get all stories.
@@ -185,28 +187,28 @@ Get all stories.
 List all stories.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StoryApi.new
-
-opts = { 
+opts = {
   page: 1, # Integer | Current page *(Optional)*
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+  item_id: 56, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  model_type_id: 56, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 56, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -219,6 +221,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -237,16 +240,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_story_by_id
 
-# **update_story_by_id**
 > Success update_story_by_id(id, opts)
 
 Update story by id
@@ -254,22 +257,21 @@ Update story by id
 Update story by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StoryApi.new
-
-id = 789 # Integer | ID of Story **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Story **(Required)**
+opts = {
   data: RadioManagerClient::StoryDataInput.new # StoryDataInput | Data *(Optional)*
 }
 
@@ -284,9 +286,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Story **(Required)** | 
+ **id** | **Integer**| ID of Story **(Required)** | [default to 0]
  **data** | [**StoryDataInput**](StoryDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -295,12 +298,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

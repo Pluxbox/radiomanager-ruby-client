@@ -1,6 +1,6 @@
 # RadioManagerClient::GenreApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**list_genres**](GenreApi.md#list_genres) | **GET** /genres | List all genres.
 
 
-# **get_genre_by_id**
+
+## get_genre_by_id
+
 > GenreResult get_genre_by_id(id, opts)
 
 Get genre by id
@@ -16,23 +18,22 @@ Get genre by id
 Get genre by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::GenreApi.new
-
-id = 789 # Integer | ID of Genre **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Genre **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -46,9 +47,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Genre **(Required)** | 
+ **id** | **Integer**| ID of Genre **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -57,16 +59,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_genres
 
-# **list_genres**
 > GenreResults list_genres(opts)
 
 List all genres.
@@ -74,28 +76,28 @@ List all genres.
 List all genres.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::GenreApi.new
-
-opts = { 
-  page: 789, # Integer | Current page *(Optional)*
-  parent_id: 789, # Integer | Search on Parent ID of Genre *(Optional)*
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+opts = {
+  page: 56, # Integer | Current page *(Optional)*
+  parent_id: 56, # Integer | Search on Parent ID of Genre *(Optional)*
+  program_id: 56, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  broadcast_id: 56, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -108,6 +110,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -126,12 +129,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

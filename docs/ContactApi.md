@@ -1,6 +1,6 @@
 # RadioManagerClient::ContactApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**update_contact_by_id**](ContactApi.md#update_contact_by_id) | **PATCH** /contacts/{id} | Update contact by id
 
 
-# **create_contact**
+
+## create_contact
+
 > PostSuccess create_contact(data)
 
 Create contact.
@@ -19,21 +21,20 @@ Create contact.
 Create contact.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ContactApi.new
-
 data = RadioManagerClient::ContactDataInput.new # ContactDataInput | Data **(Required)**
-
 
 begin
   #Create contact.
@@ -46,6 +47,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**ContactDataInput**](ContactDataInput.md)| Data **(Required)** | 
@@ -56,16 +58,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_contact_by_id
 
-# **delete_contact_by_id**
 > Success delete_contact_by_id(id)
 
 Delete contact by id
@@ -73,21 +75,20 @@ Delete contact by id
 Delete contact by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ContactApi.new
-
-id = 789 # Integer | ID of Contact **(Required)**
-
+id = 0 # Integer | ID of Contact **(Required)**
 
 begin
   #Delete contact by id
@@ -100,9 +101,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Contact **(Required)** | 
+ **id** | **Integer**| ID of Contact **(Required)** | [default to 0]
 
 ### Return type
 
@@ -110,16 +112,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_contact_by_id
 
-# **get_contact_by_id**
 > ContactResult get_contact_by_id(id, opts)
 
 Get contact by id
@@ -127,23 +129,22 @@ Get contact by id
 Get contact by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ContactApi.new
-
-id = 789 # Integer | ID of Contact **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Contact **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -157,9 +158,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Contact **(Required)** | 
+ **id** | **Integer**| ID of Contact **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -168,16 +170,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_contacts
 
-# **list_contacts**
 > ContactResults list_contacts(opts)
 
 Get all contacts.
@@ -185,28 +187,28 @@ Get all contacts.
 List all contacts.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ContactApi.new
-
-opts = { 
+opts = {
   page: 1, # Integer | Current page *(Optional)*
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+  item_id: 56, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  model_type_id: 56, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 56, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -219,6 +221,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -237,16 +240,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_contact_by_id
 
-# **update_contact_by_id**
 > Success update_contact_by_id(id, opts)
 
 Update contact by id
@@ -254,22 +257,21 @@ Update contact by id
 Update contact by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ContactApi.new
-
-id = 789 # Integer | ID of Contact **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Contact **(Required)**
+opts = {
   data: RadioManagerClient::ContactDataInput.new # ContactDataInput | Data *(Optional)*
 }
 
@@ -284,9 +286,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Contact **(Required)** | 
+ **id** | **Integer**| ID of Contact **(Required)** | [default to 0]
  **data** | [**ContactDataInput**](ContactDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -295,12 +298,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

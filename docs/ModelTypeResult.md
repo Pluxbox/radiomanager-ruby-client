@@ -1,6 +1,7 @@
 # RadioManagerClient::ModelTypeResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
@@ -18,5 +19,27 @@ Name | Type | Description | Notes
 **presenters** | [**ModelTypeRelationsPresenters**](ModelTypeRelationsPresenters.md) |  | [optional] 
 **items** | [**ModelTypeRelationsItems**](ModelTypeRelationsItems.md) |  | [optional] 
 **_external_station_id** | **Integer** |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'RadioManagerClient'
+
+instance = RadioManagerClient::ModelTypeResult.new(id: 1,
+                                 name: FooBar,
+                                 model: program,
+                                 created_at: 2016-01-11T22:01:11+02:00,
+                                 updated_at: 2016-01-11T22:01:11+02:00,
+                                 options: null,
+                                 order: 0,
+                                 deleted_at: 2016-01-11T22:01:11+02:00,
+                                 campaigns: null,
+                                 broadcasts: null,
+                                 programs: null,
+                                 contacts: null,
+                                 presenters: null,
+                                 items: null,
+                                 _external_station_id: null)
+```
 
 

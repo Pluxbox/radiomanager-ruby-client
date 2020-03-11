@@ -1,6 +1,7 @@
 # RadioManagerClient::ItemRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **block** | [**ItemRelationsBlock**](ItemRelationsBlock.md) |  | [optional] 
@@ -10,5 +11,19 @@ Name | Type | Description | Notes
 **tags** | [**ItemRelationsTags**](ItemRelationsTags.md) |  | [optional] 
 **campaign** | [**ItemRelationsCampaign**](ItemRelationsCampaign.md) |  | [optional] 
 **model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'RadioManagerClient'
+
+instance = RadioManagerClient::ItemRelations.new(block: null,
+                                 broadcast: null,
+                                 program: null,
+                                 contacts: null,
+                                 tags: null,
+                                 campaign: null,
+                                 model_type: null)
+```
 
 

@@ -1,6 +1,6 @@
 # RadioManagerClient::ItemApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,9 @@ Method | HTTP request | Description
 [**update_item_by_id**](ItemApi.md#update_item_by_id) | **PATCH** /items/{id} | Update extended item details by ID.
 
 
-# **create_item**
+
+## create_item
+
 > PostSuccess create_item(opts)
 
 Create an new item.
@@ -26,20 +28,20 @@ Create an new item.
 Create item.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
+opts = {
   data: RadioManagerClient::ItemDataInput.new # ItemDataInput | Data *(Optional)*
 }
 
@@ -54,6 +56,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
@@ -64,16 +67,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## current_item_post_structure
 
-# **current_item_post_structure**
 > Success current_item_post_structure(opts)
 
 Post a current playing item, keep structure
@@ -81,20 +84,20 @@ Post a current playing item, keep structure
 Post a current playing item, keep structure
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
+opts = {
   data: RadioManagerClient::ImportItem.new # ImportItem | Data *(Optional)*
 }
 
@@ -109,6 +112,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**ImportItem**](ImportItem.md)| Data *(Optional)* | [optional] 
@@ -119,16 +123,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## current_item_post_timing
 
-# **current_item_post_timing**
 > Success current_item_post_timing(opts)
 
 Post a current playing item
@@ -136,20 +140,20 @@ Post a current playing item
 Post a current playing item
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
+opts = {
   data: RadioManagerClient::ImportItem.new # ImportItem | Data *(Optional)*
 }
 
@@ -164,6 +168,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**ImportItem**](ImportItem.md)| Data *(Optional)* | [optional] 
@@ -174,16 +179,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_item_by_id
 
-# **delete_item_by_id**
 > Success delete_item_by_id(id)
 
 Delete item by ID.
@@ -191,21 +196,20 @@ Delete item by ID.
 Delete item by id.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-id = 789 # Integer | ID of Item **(Required)**
-
+id = 0 # Integer | ID of Item **(Required)**
 
 begin
   #Delete item by ID.
@@ -218,9 +222,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Item **(Required)** | 
+ **id** | **Integer**| ID of Item **(Required)** | [default to 0]
 
 ### Return type
 
@@ -228,16 +233,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_current_item
 
-# **get_current_item**
 > ItemResult get_current_item(opts)
 
 Get current Item
@@ -245,21 +250,21 @@ Get current Item
 Get current Item
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  lastplayed: true # BOOLEAN | Show last played item if there is no current item*(Optional)*
+opts = {
+  lastplayed: true # Boolean | Show last played item if there is no current item*(Optional)*
 }
 
 begin
@@ -273,9 +278,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **lastplayed** | **BOOLEAN**| Show last played item if there is no current item*(Optional)* | [optional] 
+ **lastplayed** | **Boolean**| Show last played item if there is no current item*(Optional)* | [optional] 
 
 ### Return type
 
@@ -283,16 +289,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_item_by_id
 
-# **get_item_by_id**
 > ItemResult get_item_by_id(id, opts)
 
 Get extended item details by ID.
@@ -300,23 +306,22 @@ Get extended item details by ID.
 Read item by id.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-id = 789 # Integer | ID of Item **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Item **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -330,9 +335,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Item **(Required)** | 
+ **id** | **Integer**| ID of Item **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -341,16 +347,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_items
 
-# **list_items**
 > ItemResults list_items(opts)
 
 Get a list of all the items currently in your station.
@@ -358,41 +364,41 @@ Get a list of all the items currently in your station.
 Get a list of all the items currently in your station. This feature supports pagination and will give a maximum results of 50 items back.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  page: 789, # Integer | Current page *(Optional)*
-  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
-  campaign_id: 789, # Integer | Search on Campaign ID *(Optional)* `(Relation)`
-  contact_id: 789, # Integer | Search on Contact ID *(Optional)* `(Relation)`
-  program_draft_id: 789, # Integer | Search on Program Draft ID *(Optional)*
-  user_draft_id: 789, # Integer | Search on User Draft ID *(Optional)*
-  station_draft_id: 789, # Integer | Search on Station Draft ID *(Optional)*
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  external_id: "external_id_example", # String | Search on External ID *(Optional)*
-  start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
-  start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
+opts = {
+  page: 56, # Integer | Current page *(Optional)*
+  block_id: 56, # Integer | Search on Block ID *(Optional)* `(Relation)`
+  broadcast_id: 56, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  model_type_id: 56, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 56, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  campaign_id: 56, # Integer | Search on Campaign ID *(Optional)* `(Relation)`
+  contact_id: 56, # Integer | Search on Contact ID *(Optional)* `(Relation)`
+  program_draft_id: 56, # Integer | Search on Program Draft ID *(Optional)*
+  user_draft_id: 56, # Integer | Search on User Draft ID *(Optional)*
+  station_draft_id: 56, # Integer | Search on Station Draft ID *(Optional)*
+  program_id: 56, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  external_id: 'external_id_example', # String | Search on External ID *(Optional)*
+  start_min: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Minimum start date *(Optional)*
+  start_max: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Maximum start date *(Optional)*
   duration_min: 56, # Integer | Minimum duration (seconds) *(Optional)*
   duration_max: 56, # Integer | Maximum duration (seconds) *(Optional)*
-  status: "status_example", # String | Play Status of item *(Optional)*
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+  status: 'status_example', # String | Play Status of item *(Optional)*
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -405,6 +411,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -436,16 +443,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## playlist_post_merge
 
-# **playlist_post_merge**
 > InlineResponse202 playlist_post_merge(opts)
 
 Post a playlist, do not remove previously imported items
@@ -453,21 +460,21 @@ Post a playlist, do not remove previously imported items
 Post a playlist, do not remove previously imported items
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  data: RadioManagerClient::Data2.new # Data2 | Data *(Optional)*
+opts = {
+  data: RadioManagerClient::InlineObject2.new # InlineObject2 | 
 }
 
 begin
@@ -481,9 +488,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data2**](Data2.md)| Data *(Optional)* | [optional] 
+ **data** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
 
@@ -491,16 +499,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## playlist_post_structure
 
-# **playlist_post_structure**
 > InlineResponse202 playlist_post_structure(opts)
 
 Post a playlist, keep current structure
@@ -508,21 +516,21 @@ Post a playlist, keep current structure
 Post a playlist, keep current structure
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  data: RadioManagerClient::Data1.new # Data1 | Data *(Optional)*
+opts = {
+  data: RadioManagerClient::InlineObject1.new # InlineObject1 | 
 }
 
 begin
@@ -536,9 +544,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data1**](Data1.md)| Data *(Optional)* | [optional] 
+ **data** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type
 
@@ -546,16 +555,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## playlist_post_timing
 
-# **playlist_post_timing**
 > InlineResponse202 playlist_post_timing(opts)
 
 Post a playlist
@@ -563,21 +572,21 @@ Post a playlist
 Post a playlist
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  data: RadioManagerClient::Data.new # Data | Data *(Optional)*
+opts = {
+  data: RadioManagerClient::InlineObject.new # InlineObject | 
 }
 
 begin
@@ -591,9 +600,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data**](Data.md)| Data *(Optional)* | [optional] 
+ **data** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
 
@@ -601,16 +611,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## stop_current_item
 
-# **stop_current_item**
 > Success stop_current_item(opts)
 
 Stop an Item
@@ -618,21 +628,21 @@ Stop an Item
 Set a current playing or specific item on played
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-opts = { 
-  data: RadioManagerClient::Data3.new # Data3 | Data *(Optional)*
+opts = {
+  data: RadioManagerClient::InlineObject3.new # InlineObject3 | 
 }
 
 begin
@@ -646,9 +656,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Data3**](Data3.md)| Data *(Optional)* | [optional] 
+ **data** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
 
@@ -656,16 +667,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## update_item_by_id
 
-# **update_item_by_id**
 > Success update_item_by_id(id, opts)
 
 Update extended item details by ID.
@@ -673,22 +684,21 @@ Update extended item details by ID.
 Update item by id.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ItemApi.new
-
-id = 789 # Integer | ID of Item **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Item **(Required)**
+opts = {
   data: RadioManagerClient::ItemDataInput.new # ItemDataInput | Data *(Optional)*
 }
 
@@ -703,9 +713,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Item **(Required)** | 
+ **id** | **Integer**| ID of Item **(Required)** | [default to 0]
  **data** | [**ItemDataInput**](ItemDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -714,12 +725,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

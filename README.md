@@ -3,38 +3,39 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.1.11-dev
+- Package version: 1.1.13-dev
+- Build package: org.openapitools.codegen.languages.RubyClientCodegen
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
 ## Installation
-
 To install the ruby package, run the following command:
 
-```shell
+Include the Ruby code directly using `-I` as follows:
 gem install radiomanager_client
+```shell
+ruby -Ilib script.rb
 ```
 
 ## Getting Started
 
 Please follow the [installation](#installation) procedure and then run the following code:
+
 ```ruby
 # Load the gem
 require 'radiomanager_client'
 
 # Setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BlockApi.new
-
-id = 789 # Integer | ID of Block **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Block **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -49,7 +50,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -132,10 +133,13 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::BlockRelationsItems](docs/BlockRelationsItems.md)
  - [RadioManagerClient::BlockRelationsItemsParams](docs/BlockRelationsItemsParams.md)
  - [RadioManagerClient::BlockRelationsProgram](docs/BlockRelationsProgram.md)
+ - [RadioManagerClient::BlockResult](docs/BlockResult.md)
  - [RadioManagerClient::BlockResults](docs/BlockResults.md)
  - [RadioManagerClient::Broadcast](docs/Broadcast.md)
+ - [RadioManagerClient::BroadcastDataInput](docs/BroadcastDataInput.md)
  - [RadioManagerClient::BroadcastEPGDay](docs/BroadcastEPGDay.md)
  - [RadioManagerClient::BroadcastEPGRelations](docs/BroadcastEPGRelations.md)
+ - [RadioManagerClient::BroadcastEPGResult](docs/BroadcastEPGResult.md)
  - [RadioManagerClient::BroadcastInputOnly](docs/BroadcastInputOnly.md)
  - [RadioManagerClient::BroadcastOutputOnly](docs/BroadcastOutputOnly.md)
  - [RadioManagerClient::BroadcastRelations](docs/BroadcastRelations.md)
@@ -146,25 +150,27 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::BroadcastRelationsModelType](docs/BroadcastRelationsModelType.md)
  - [RadioManagerClient::BroadcastRelationsPresenters](docs/BroadcastRelationsPresenters.md)
  - [RadioManagerClient::BroadcastRelationsTags](docs/BroadcastRelationsTags.md)
+ - [RadioManagerClient::BroadcastResult](docs/BroadcastResult.md)
  - [RadioManagerClient::BroadcastResults](docs/BroadcastResults.md)
  - [RadioManagerClient::Campaign](docs/Campaign.md)
+ - [RadioManagerClient::CampaignDataInput](docs/CampaignDataInput.md)
  - [RadioManagerClient::CampaignOutputOnly](docs/CampaignOutputOnly.md)
  - [RadioManagerClient::CampaignRelations](docs/CampaignRelations.md)
  - [RadioManagerClient::CampaignRelationsItems](docs/CampaignRelationsItems.md)
  - [RadioManagerClient::CampaignRelationsItemsParams](docs/CampaignRelationsItemsParams.md)
+ - [RadioManagerClient::CampaignResult](docs/CampaignResult.md)
  - [RadioManagerClient::CampaignResults](docs/CampaignResults.md)
  - [RadioManagerClient::CampaignTemplateItem](docs/CampaignTemplateItem.md)
+ - [RadioManagerClient::CampaignTemplateItemAllOf](docs/CampaignTemplateItemAllOf.md)
  - [RadioManagerClient::Contact](docs/Contact.md)
+ - [RadioManagerClient::ContactDataInput](docs/ContactDataInput.md)
  - [RadioManagerClient::ContactOutputOnly](docs/ContactOutputOnly.md)
  - [RadioManagerClient::ContactRelations](docs/ContactRelations.md)
  - [RadioManagerClient::ContactRelationsItems](docs/ContactRelationsItems.md)
  - [RadioManagerClient::ContactRelationsTags](docs/ContactRelationsTags.md)
  - [RadioManagerClient::ContactRelationsTagsParams](docs/ContactRelationsTagsParams.md)
+ - [RadioManagerClient::ContactResult](docs/ContactResult.md)
  - [RadioManagerClient::ContactResults](docs/ContactResults.md)
- - [RadioManagerClient::Data](docs/Data.md)
- - [RadioManagerClient::Data1](docs/Data1.md)
- - [RadioManagerClient::Data2](docs/Data2.md)
- - [RadioManagerClient::Data3](docs/Data3.md)
  - [RadioManagerClient::EPGResults](docs/EPGResults.md)
  - [RadioManagerClient::Forbidden](docs/Forbidden.md)
  - [RadioManagerClient::Genre](docs/Genre.md)
@@ -173,13 +179,20 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::GenreRelationsBroadcasts](docs/GenreRelationsBroadcasts.md)
  - [RadioManagerClient::GenreRelationsBroadcastsParams](docs/GenreRelationsBroadcastsParams.md)
  - [RadioManagerClient::GenreRelationsPrograms](docs/GenreRelationsPrograms.md)
+ - [RadioManagerClient::GenreResult](docs/GenreResult.md)
  - [RadioManagerClient::GenreResults](docs/GenreResults.md)
  - [RadioManagerClient::ImportItem](docs/ImportItem.md)
+ - [RadioManagerClient::ImportItemAllOf](docs/ImportItemAllOf.md)
+ - [RadioManagerClient::InlineObject](docs/InlineObject.md)
+ - [RadioManagerClient::InlineObject1](docs/InlineObject1.md)
+ - [RadioManagerClient::InlineObject2](docs/InlineObject2.md)
+ - [RadioManagerClient::InlineObject3](docs/InlineObject3.md)
  - [RadioManagerClient::InlineResponse202](docs/InlineResponse202.md)
  - [RadioManagerClient::InternalServerError](docs/InternalServerError.md)
  - [RadioManagerClient::InviteUserData](docs/InviteUserData.md)
- - [RadioManagerClient::InviteUserSuccess](docs/InviteUserSuccess.md)
  - [RadioManagerClient::Item](docs/Item.md)
+ - [RadioManagerClient::ItemAllOf](docs/ItemAllOf.md)
+ - [RadioManagerClient::ItemDataInput](docs/ItemDataInput.md)
  - [RadioManagerClient::ItemInputOnly](docs/ItemInputOnly.md)
  - [RadioManagerClient::ItemOutputOnly](docs/ItemOutputOnly.md)
  - [RadioManagerClient::ItemRelations](docs/ItemRelations.md)
@@ -189,6 +202,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ItemRelationsContactsParams](docs/ItemRelationsContactsParams.md)
  - [RadioManagerClient::ItemRelationsProgram](docs/ItemRelationsProgram.md)
  - [RadioManagerClient::ItemRelationsTags](docs/ItemRelationsTags.md)
+ - [RadioManagerClient::ItemResult](docs/ItemResult.md)
  - [RadioManagerClient::ItemResults](docs/ItemResults.md)
  - [RadioManagerClient::ModelType](docs/ModelType.md)
  - [RadioManagerClient::ModelTypeOptions](docs/ModelTypeOptions.md)
@@ -201,18 +215,24 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ModelTypeRelationsItems](docs/ModelTypeRelationsItems.md)
  - [RadioManagerClient::ModelTypeRelationsPresenters](docs/ModelTypeRelationsPresenters.md)
  - [RadioManagerClient::ModelTypeRelationsPrograms](docs/ModelTypeRelationsPrograms.md)
+ - [RadioManagerClient::ModelTypeResult](docs/ModelTypeResult.md)
  - [RadioManagerClient::ModelTypeResults](docs/ModelTypeResults.md)
  - [RadioManagerClient::NotFound](docs/NotFound.md)
  - [RadioManagerClient::PostSuccess](docs/PostSuccess.md)
  - [RadioManagerClient::Presenter](docs/Presenter.md)
+ - [RadioManagerClient::PresenterDataInput](docs/PresenterDataInput.md)
+ - [RadioManagerClient::PresenterEPGResult](docs/PresenterEPGResult.md)
  - [RadioManagerClient::PresenterOutputOnly](docs/PresenterOutputOnly.md)
  - [RadioManagerClient::PresenterRelations](docs/PresenterRelations.md)
  - [RadioManagerClient::PresenterRelationsBroadcasts](docs/PresenterRelationsBroadcasts.md)
  - [RadioManagerClient::PresenterRelationsPrograms](docs/PresenterRelationsPrograms.md)
  - [RadioManagerClient::PresenterRelationsProgramsParams](docs/PresenterRelationsProgramsParams.md)
+ - [RadioManagerClient::PresenterResult](docs/PresenterResult.md)
  - [RadioManagerClient::PresenterResults](docs/PresenterResults.md)
  - [RadioManagerClient::Program](docs/Program.md)
+ - [RadioManagerClient::ProgramDataInput](docs/ProgramDataInput.md)
  - [RadioManagerClient::ProgramInputOnly](docs/ProgramInputOnly.md)
+ - [RadioManagerClient::ProgramInputOnlyAllOf](docs/ProgramInputOnlyAllOf.md)
  - [RadioManagerClient::ProgramOutputOnly](docs/ProgramOutputOnly.md)
  - [RadioManagerClient::ProgramRelations](docs/ProgramRelations.md)
  - [RadioManagerClient::ProgramRelationsBlocks](docs/ProgramRelationsBlocks.md)
@@ -221,6 +241,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::ProgramRelationsItemsParams](docs/ProgramRelationsItemsParams.md)
  - [RadioManagerClient::ProgramRelationsPresenters](docs/ProgramRelationsPresenters.md)
  - [RadioManagerClient::ProgramRelationsTags](docs/ProgramRelationsTags.md)
+ - [RadioManagerClient::ProgramResult](docs/ProgramResult.md)
  - [RadioManagerClient::ProgramResults](docs/ProgramResults.md)
  - [RadioManagerClient::ReadOnly](docs/ReadOnly.md)
  - [RadioManagerClient::RelationsPlaceholder](docs/RelationsPlaceholder.md)
@@ -228,15 +249,19 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::StationResultStation](docs/StationResultStation.md)
  - [RadioManagerClient::StationResultStationStartDays](docs/StationResultStationStartDays.md)
  - [RadioManagerClient::Story](docs/Story.md)
+ - [RadioManagerClient::StoryDataInput](docs/StoryDataInput.md)
  - [RadioManagerClient::StoryInputOnly](docs/StoryInputOnly.md)
+ - [RadioManagerClient::StoryInputOnlyAllOf](docs/StoryInputOnlyAllOf.md)
  - [RadioManagerClient::StoryOutputOnly](docs/StoryOutputOnly.md)
  - [RadioManagerClient::StoryRelations](docs/StoryRelations.md)
  - [RadioManagerClient::StoryRelationsItems](docs/StoryRelationsItems.md)
  - [RadioManagerClient::StoryRelationsTags](docs/StoryRelationsTags.md)
  - [RadioManagerClient::StoryRelationsTagsParams](docs/StoryRelationsTagsParams.md)
+ - [RadioManagerClient::StoryResult](docs/StoryResult.md)
  - [RadioManagerClient::StoryResults](docs/StoryResults.md)
  - [RadioManagerClient::Success](docs/Success.md)
  - [RadioManagerClient::Tag](docs/Tag.md)
+ - [RadioManagerClient::TagDataInput](docs/TagDataInput.md)
  - [RadioManagerClient::TagOutputOnly](docs/TagOutputOnly.md)
  - [RadioManagerClient::TagRelations](docs/TagRelations.md)
  - [RadioManagerClient::TagRelationsBroadcasts](docs/TagRelationsBroadcasts.md)
@@ -244,6 +269,7 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::TagRelationsContacts](docs/TagRelationsContacts.md)
  - [RadioManagerClient::TagRelationsItems](docs/TagRelationsItems.md)
  - [RadioManagerClient::TagRelationsPrograms](docs/TagRelationsPrograms.md)
+ - [RadioManagerClient::TagResult](docs/TagResult.md)
  - [RadioManagerClient::TagResults](docs/TagResults.md)
  - [RadioManagerClient::TextString](docs/TextString.md)
  - [RadioManagerClient::TooManyRequests](docs/TooManyRequests.md)
@@ -253,33 +279,13 @@ Class | Method | HTTP request | Description
  - [RadioManagerClient::UserResultSettings](docs/UserResultSettings.md)
  - [RadioManagerClient::UserResults](docs/UserResults.md)
  - [RadioManagerClient::VisualResult](docs/VisualResult.md)
- - [RadioManagerClient::BlockResult](docs/BlockResult.md)
- - [RadioManagerClient::BroadcastDataInput](docs/BroadcastDataInput.md)
- - [RadioManagerClient::BroadcastEPGResult](docs/BroadcastEPGResult.md)
- - [RadioManagerClient::BroadcastResult](docs/BroadcastResult.md)
- - [RadioManagerClient::CampaignDataInput](docs/CampaignDataInput.md)
- - [RadioManagerClient::CampaignResult](docs/CampaignResult.md)
- - [RadioManagerClient::ContactDataInput](docs/ContactDataInput.md)
- - [RadioManagerClient::ContactResult](docs/ContactResult.md)
- - [RadioManagerClient::GenreResult](docs/GenreResult.md)
- - [RadioManagerClient::ItemDataInput](docs/ItemDataInput.md)
- - [RadioManagerClient::ItemResult](docs/ItemResult.md)
- - [RadioManagerClient::ModelTypeResult](docs/ModelTypeResult.md)
- - [RadioManagerClient::PresenterDataInput](docs/PresenterDataInput.md)
- - [RadioManagerClient::PresenterEPGResult](docs/PresenterEPGResult.md)
- - [RadioManagerClient::PresenterResult](docs/PresenterResult.md)
- - [RadioManagerClient::ProgramDataInput](docs/ProgramDataInput.md)
- - [RadioManagerClient::ProgramResult](docs/ProgramResult.md)
- - [RadioManagerClient::StoryDataInput](docs/StoryDataInput.md)
- - [RadioManagerClient::StoryResult](docs/StoryResult.md)
- - [RadioManagerClient::TagDataInput](docs/TagDataInput.md)
- - [RadioManagerClient::TagResult](docs/TagResult.md)
 
 
 ## Documentation for Authorization
 
 
-### API Key
+### API-Key
+
 
 - **Type**: API key
 - **API key parameter name**: api-key

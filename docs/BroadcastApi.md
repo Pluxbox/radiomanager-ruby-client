@@ -1,6 +1,6 @@
 # RadioManagerClient::BroadcastApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,9 @@ Method | HTTP request | Description
 [**update_broadcast_by_id**](BroadcastApi.md#update_broadcast_by_id) | **PATCH** /broadcasts/{id} | Update broadcast by id
 
 
-# **create_broadcast**
+
+## create_broadcast
+
 > PostSuccess create_broadcast(data)
 
 Create broadcast.
@@ -25,21 +27,20 @@ Create broadcast.
 Create broadcast.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
 data = RadioManagerClient::BroadcastDataInput.new # BroadcastDataInput | Data **(Required)**
-
 
 begin
   #Create broadcast.
@@ -52,6 +53,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data **(Required)** | 
@@ -62,16 +64,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_broadcast_by_id
 
-# **delete_broadcast_by_id**
 > Success delete_broadcast_by_id(id)
 
 Delete broadcast by id
@@ -79,21 +81,20 @@ Delete broadcast by id
 Delete broadcast by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-id = 789 # Integer | ID of Broadcast **(Required)**
-
+id = 0 # Integer | ID of Broadcast **(Required)**
 
 begin
   #Delete broadcast by id
@@ -106,9 +107,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Broadcast **(Required)** | 
+ **id** | **Integer**| ID of Broadcast **(Required)** | [default to 0]
 
 ### Return type
 
@@ -116,16 +118,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_broadcast_by_id
 
-# **get_broadcast_by_id**
 > BroadcastResult get_broadcast_by_id(id, opts)
 
 Get broadcast by id
@@ -133,23 +135,22 @@ Get broadcast by id
 Get broadcast by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-id = 789 # Integer | ID of Broadcast **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Broadcast **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -163,9 +164,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Broadcast **(Required)** | 
+ **id** | **Integer**| ID of Broadcast **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -174,16 +176,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_current_broadcast
 
-# **get_current_broadcast**
 > BroadcastResult get_current_broadcast(opts)
 
 Get current Broadcast
@@ -191,21 +193,21 @@ Get current Broadcast
 Get current Broadcast
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
-  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+opts = {
+  withunpublished: true # Boolean | Show Unpublished *(Optional)*
 }
 
 begin
@@ -219,9 +221,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -229,16 +232,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_daily_epg
 
-# **get_daily_epg**
 > EPGResults get_daily_epg(opts)
 
 Get daily EPG
@@ -246,22 +249,22 @@ Get daily EPG
 Get current Broadcast
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
-  date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Date *(Optional)*
-  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+opts = {
+  date: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Date *(Optional)*
+  withunpublished: true # Boolean | Show Unpublished *(Optional)*
 }
 
 begin
@@ -275,10 +278,11 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **DateTime**| Date *(Optional)* | [optional] 
- **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -286,16 +290,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_epg_by_date
 
-# **get_epg_by_date**
 > EPGResults get_epg_by_date(opts)
 
 Get EPG by date
@@ -303,22 +307,22 @@ Get EPG by date
 Get EPG by date
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
-  date: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Date *(Optional)*
-  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+opts = {
+  date: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Date *(Optional)*
+  withunpublished: true # Boolean | Show Unpublished *(Optional)*
 }
 
 begin
@@ -332,10 +336,11 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **DateTime**| Date *(Optional)* | [optional] 
- **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -343,16 +348,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_next_broadcast
 
-# **get_next_broadcast**
 > BroadcastResult get_next_broadcast(opts)
 
 Get next Broadcast
@@ -360,21 +365,21 @@ Get next Broadcast
 Get next Broadcast
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
-  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+opts = {
+  withunpublished: true # Boolean | Show Unpublished *(Optional)*
 }
 
 begin
@@ -388,9 +393,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -398,16 +404,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_weekly_epg
 
-# **get_weekly_epg**
 > EPGResults get_weekly_epg(opts)
 
 Get weekly EPG
@@ -415,22 +421,22 @@ Get weekly EPG
 Get weekly EPG
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
-  date: "date_example", # String | Date *(Optional)*
-  withunpublished: true # BOOLEAN | Show Unpublished *(Optional)*
+opts = {
+  date: 'date_example', # String | Date *(Optional)*
+  withunpublished: true # Boolean | Show Unpublished *(Optional)*
 }
 
 begin
@@ -444,10 +450,11 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | **String**| Date *(Optional)* | [optional] 
- **withunpublished** | **BOOLEAN**| Show Unpublished *(Optional)* | [optional] 
+ **withunpublished** | **Boolean**| Show Unpublished *(Optional)* | [optional] 
 
 ### Return type
 
@@ -455,16 +462,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_broadcasts
 
-# **list_broadcasts**
 > BroadcastResults list_broadcasts(opts)
 
 Get all broadcasts.
@@ -472,34 +479,34 @@ Get all broadcasts.
 List all broadcasts.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-opts = { 
+opts = {
   page: 1, # Integer | Current page *(Optional)*
-  program_id: 789, # Integer | Search on Program ID *(Optional)* `(Relation)`
-  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
-  presenter_id: 789, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
-  genre_id: 789, # Integer | Search on Genre ID *(Optional)* `(Relation)`
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  start_min: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Minimum start date *(Optional)*
-  start_max: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | Maximum start date *(Optional)*
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+  program_id: 56, # Integer | Search on Program ID *(Optional)* `(Relation)`
+  block_id: 56, # Integer | Search on Block ID *(Optional)* `(Relation)`
+  model_type_id: 56, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 56, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  presenter_id: 56, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
+  genre_id: 56, # Integer | Search on Genre ID *(Optional)* `(Relation)`
+  item_id: 56, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  start_min: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Minimum start date *(Optional)*
+  start_max: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | Maximum start date *(Optional)*
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -512,6 +519,7 @@ end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -536,16 +544,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## print_broadcast_by_id
 
-# **print_broadcast_by_id**
 > String print_broadcast_by_id(id, opts)
 
 Print broadcast by id with template
@@ -553,23 +561,22 @@ Print broadcast by id with template
 Print broadcast by id with template
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-id = 789 # Integer | ID of Broadcast **(Required)**
-
-opts = { 
-  template_id: 789 # Integer | Search on template ID *(Optional)*
+id = 0 # Integer | ID of Broadcast **(Required)**
+opts = {
+  template_id: 56 # Integer | Search on template ID *(Optional)*
 }
 
 begin
@@ -583,9 +590,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Broadcast **(Required)** | 
+ **id** | **Integer**| ID of Broadcast **(Required)** | [default to 0]
  **template_id** | **Integer**| Search on template ID *(Optional)* | [optional] 
 
 ### Return type
@@ -594,16 +602,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_broadcast_by_id
 
-# **update_broadcast_by_id**
 > Success update_broadcast_by_id(id, opts)
 
 Update broadcast by id
@@ -611,22 +619,21 @@ Update broadcast by id
 Update broadcast by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::BroadcastApi.new
-
-id = 789 # Integer | ID of Broadcast **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Broadcast **(Required)**
+opts = {
   data: RadioManagerClient::BroadcastDataInput.new # BroadcastDataInput | Data *(Optional)*
 }
 
@@ -641,9 +648,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Broadcast **(Required)** | 
+ **id** | **Integer**| ID of Broadcast **(Required)** | [default to 0]
  **data** | [**BroadcastDataInput**](BroadcastDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -652,12 +660,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

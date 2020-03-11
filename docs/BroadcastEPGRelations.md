@@ -1,6 +1,7 @@
 # RadioManagerClient::BroadcastEPGRelations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**BroadcastRelationsItems**](BroadcastRelationsItems.md) |  | [optional] 
@@ -9,5 +10,18 @@ Name | Type | Description | Notes
 **tags** | [**BroadcastRelationsTags**](BroadcastRelationsTags.md) |  | [optional] 
 **presenters** | [**Array&lt;PresenterEPGResult&gt;**](PresenterEPGResult.md) |  | [optional] 
 **model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'RadioManagerClient'
+
+instance = RadioManagerClient::BroadcastEPGRelations.new(items: null,
+                                 blocks: null,
+                                 program: null,
+                                 tags: null,
+                                 presenters: null,
+                                 model_type: null)
+```
 
 

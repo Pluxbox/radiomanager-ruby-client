@@ -1,6 +1,6 @@
 # RadioManagerClient::ProgramApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**update_program_by_id**](ProgramApi.md#update_program_by_id) | **PATCH** /programs/{id} | Update program by id
 
 
-# **create_program**
+
+## create_program
+
 > PostSuccess create_program(data)
 
 Create program.
@@ -19,21 +21,20 @@ Create program.
 Create program.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ProgramApi.new
-
 data = RadioManagerClient::ProgramDataInput.new # ProgramDataInput | Data **(Required)**
-
 
 begin
   #Create program.
@@ -46,6 +47,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**ProgramDataInput**](ProgramDataInput.md)| Data **(Required)** | 
@@ -56,16 +58,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_program_by_id
 
-# **delete_program_by_id**
 > Success delete_program_by_id(id)
 
 Delete program by id
@@ -73,21 +75,20 @@ Delete program by id
 Delete program by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ProgramApi.new
-
-id = 789 # Integer | ID of program **(Required)**
-
+id = 0 # Integer | ID of program **(Required)**
 
 begin
   #Delete program by id
@@ -100,9 +101,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of program **(Required)** | 
+ **id** | **Integer**| ID of program **(Required)** | [default to 0]
 
 ### Return type
 
@@ -110,16 +112,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## get_program_by_id
 
-# **get_program_by_id**
 > ProgramResult get_program_by_id(id, opts)
 
 Get program by id
@@ -127,23 +129,22 @@ Get program by id
 Get program by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ProgramApi.new
-
-id = 789 # Integer | ID of Program **(Required)**
-
-opts = { 
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+id = 0 # Integer | ID of Program **(Required)**
+opts = {
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -157,9 +158,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Program **(Required)** | 
+ **id** | **Integer**| ID of Program **(Required)** | [default to 0]
  **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
 
 ### Return type
@@ -168,16 +170,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## list_programs
 
-# **list_programs**
 > ProgramResults list_programs(opts)
 
 Get all programs.
@@ -185,32 +187,33 @@ Get all programs.
 List all programs.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ProgramApi.new
-
-opts = { 
-  page: 789, # Integer | Current page *(Optional)*
-  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
-  model_type_id: 789, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
-  tag_id: 789, # Integer | Search on Tag ID *(Optional)* `(Relation)`
-  presenter_id: 789, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
-  genre_id: 789, # Integer | Search on Genre ID *(Optional)*
-  block_id: 789, # Integer | Search on Block ID *(Optional)* `(Relation)`
-  item_id: 789, # Integer | Search on Item ID *(Optional)* `(Relation)`
-  limit: 789, # Integer | Results per page *(Optional)*
-  order_by: "order_by_example", # String | Field to order the results *(Optional)*
-  order_direction: "order_direction_example", # String | Direction of ordering *(Optional)*
-  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
+opts = {
+  page: 56, # Integer | Current page *(Optional)*
+  broadcast_id: 56, # Integer | Search on Broadcast ID *(Optional)* `(Relation)`
+  model_type_id: 56, # Integer | Search on ModelType ID *(Optional)* `(Relation)`
+  tag_id: 56, # Integer | Search on Tag ID *(Optional)* `(Relation)`
+  presenter_id: 56, # Integer | Search on Presenter ID *(Optional)* `(Relation)`
+  genre_id: 56, # Integer | Search on Genre ID *(Optional)*
+  block_id: 56, # Integer | Search on Block ID *(Optional)* `(Relation)`
+  item_id: 56, # Integer | Search on Item ID *(Optional)* `(Relation)`
+  disabled: 56, # Integer | Search on Disabled status *(Optional)*
+  limit: 56, # Integer | Results per page *(Optional)*
+  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
+  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
+  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
@@ -224,6 +227,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Current page *(Optional)* | [optional] 
@@ -234,6 +238,7 @@ Name | Type | Description  | Notes
  **genre_id** | **Integer**| Search on Genre ID *(Optional)* | [optional] 
  **block_id** | **Integer**| Search on Block ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
  **item_id** | **Integer**| Search on Item ID *(Optional)* &#x60;(Relation)&#x60; | [optional] 
+ **disabled** | **Integer**| Search on Disabled status *(Optional)* | [optional] 
  **limit** | **Integer**| Results per page *(Optional)* | [optional] 
  **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
  **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
@@ -245,16 +250,16 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_program_by_id
 
-# **update_program_by_id**
 > Success update_program_by_id(id, opts)
 
 Update program by id
@@ -262,22 +267,21 @@ Update program by id
 Update program by id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ProgramApi.new
-
-id = 789 # Integer | ID of Program **(Required)**
-
-opts = { 
+id = 0 # Integer | ID of Program **(Required)**
+opts = {
   data: RadioManagerClient::ProgramDataInput.new # ProgramDataInput | Data *(Optional)*
 }
 
@@ -292,9 +296,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of Program **(Required)** | 
+ **id** | **Integer**| ID of Program **(Required)** | [default to 0]
  **data** | [**ProgramDataInput**](ProgramDataInput.md)| Data *(Optional)* | [optional] 
 
 ### Return type
@@ -303,12 +308,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

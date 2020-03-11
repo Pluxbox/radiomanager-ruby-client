@@ -1,8 +1,16 @@
 # RadioManagerClient::TagDataInput
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
+
+## Code Sample
+
+```ruby
+require 'RadioManagerClient'
+
+instance = RadioManagerClient::TagDataInput.new()
+```
 
 

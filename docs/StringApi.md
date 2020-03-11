@@ -1,13 +1,15 @@
 # RadioManagerClient::StringApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_strings_by_name**](StringApi.md#get_strings_by_name) | **GET** /strings/{name} | Get Strings (formatted)
 
 
-# **get_strings_by_name**
+
+## get_strings_by_name
+
 > TextString get_strings_by_name(name, full_model)
 
 Get Strings (formatted)
@@ -15,23 +17,21 @@ Get Strings (formatted)
 Get Strings (formatted)
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::StringApi.new
-
-name = "name_example" # String | Name of Strings **(Required)**
-
-full_model = true # BOOLEAN | Full model or content only **(Required)**
-
+name = 'name_example' # String | Name of Strings **(Required)**
+full_model = true # Boolean | Full model or content only **(Required)**
 
 begin
   #Get Strings (formatted)
@@ -44,10 +44,11 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| Name of Strings **(Required)** | 
- **full_model** | **BOOLEAN**| Full model or content only **(Required)** | [default to true]
+ **full_model** | **Boolean**| Full model or content only **(Required)** | [default to true]
 
 ### Return type
 
@@ -55,12 +56,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

@@ -1,6 +1,7 @@
 # RadioManagerClient::ProgramResults
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current_page** | **Integer** |  | [optional] 
@@ -13,5 +14,22 @@ Name | Type | Description | Notes
 **to** | **Integer** |  | [optional] 
 **total** | **Integer** |  | [optional] 
 **results** | [**Array&lt;ProgramResult&gt;**](ProgramResult.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'RadioManagerClient'
+
+instance = RadioManagerClient::ProgramResults.new(current_page: 1,
+                                 from: 1,
+                                 last_page: 1,
+                                 next_page_url: /programs,
+                                 path: /api/v2/programs,
+                                 per_page: 50,
+                                 prev_page_url: /programs,
+                                 to: 1,
+                                 total: 1,
+                                 results: null)
+```
 
 

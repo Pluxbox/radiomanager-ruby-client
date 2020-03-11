@@ -1,13 +1,15 @@
 # RadioManagerClient::StationApi
 
-All URIs are relative to *https://staging.radiomanager.io/api/v2*
+All URIs are relative to *https://radiomanager.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_station**](StationApi.md#get_station) | **GET** /station | Get own station only
 
 
-# **get_station**
+
+## get_station
+
 > StationResult get_station
 
 Get own station only
@@ -15,12 +17,13 @@ Get own station only
 Get own station only
 
 ### Example
+
 ```ruby
 # load the gem
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
-  # Configure API key authorization: API Key
+  # Configure API key authorization: API-Key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
@@ -38,6 +41,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -46,12 +50,10 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[API Key](../README.md#API Key)
+[API-Key](../README.md#API-Key)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
