@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**value** | **String** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | **String** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::VisualResult.new(value: BASE64STRING)
+instance = RadioManagerClient::VisualResult.new(
+  value: BASE64STRING
+)
 ```
-
 

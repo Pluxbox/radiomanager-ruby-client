@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **String** |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | **String** |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::Tag.new(name: FooBar)
+instance = RadioManagerClient::Tag.new(
+  name: FooBar
+)
 ```
-
 

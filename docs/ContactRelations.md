@@ -2,20 +2,21 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**tags** | [**ContactRelationsTags**](ContactRelationsTags.md) |  | 
-**items** | [**ContactRelationsItems**](ContactRelationsItems.md) |  | [optional] 
-**model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **tags** | [**ContactRelationsTags**](ContactRelationsTags.md) |  |  |
+| **items** | [**ContactRelationsItems**](ContactRelationsItems.md) |  | [optional] |
+| **model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ContactRelations.new(tags: null,
-                                 items: null,
-                                 model_type: null)
+instance = RadioManagerClient::ContactRelations.new(
+  tags: null,
+  items: null,
+  model_type: null
+)
 ```
-
 

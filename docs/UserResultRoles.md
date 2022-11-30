@@ -2,22 +2,23 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**href** | **String** |  | [optional] 
-**model** | **String** |  | [optional] 
-**operation** | **String** |  | [optional] 
-**params** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **href** | **String** |  | [optional] |
+| **model** | **String** |  | [optional] |
+| **operation** | **String** |  | [optional] |
+| **params** | [**UserResultParams**](UserResultParams.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::UserResultRoles.new(href: https://radiomanager.pluxbox.com/api/v2/roles/2,
-                                 model: Role,
-                                 operation: getRoleById,
-                                 params: 2)
+instance = RadioManagerClient::UserResultRoles.new(
+  href: https://radiomanager.io/api/v2/roles?user_id&#x3D;1,
+  model: Role,
+  operation: listRoles,
+  params: null
+)
 ```
-
 

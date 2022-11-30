@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**_external_station_id** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **_external_station_id** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::GenreOutputOnly.new(_external_station_id: null)
+instance = RadioManagerClient::GenreOutputOnly.new(
+  _external_station_id: null
+)
 ```
-
 

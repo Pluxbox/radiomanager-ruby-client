@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**model_type_id** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **model_type_id** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ModelTypeRelationsCampaignsParams.new(model_type_id: 1)
+instance = RadioManagerClient::ModelTypeRelationsCampaignsParams.new(
+  model_type_id: 1
+)
 ```
-
 

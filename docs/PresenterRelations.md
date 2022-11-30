@@ -2,20 +2,21 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**programs** | [**PresenterRelationsPrograms**](PresenterRelationsPrograms.md) |  | [optional] 
-**broadcasts** | [**PresenterRelationsBroadcasts**](PresenterRelationsBroadcasts.md) |  | [optional] 
-**model_type** | [**BroadcastRelationsModelType**](BroadcastRelationsModelType.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **programs** | [**PresenterRelationsPrograms**](PresenterRelationsPrograms.md) |  | [optional] |
+| **broadcasts** | [**PresenterRelationsBroadcasts**](PresenterRelationsBroadcasts.md) |  | [optional] |
+| **model_type** | [**PresenterRelationsModelType**](PresenterRelationsModelType.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::PresenterRelations.new(programs: null,
-                                 broadcasts: null,
-                                 model_type: null)
+instance = RadioManagerClient::PresenterRelations.new(
+  programs: null,
+  broadcasts: null,
+  model_type: null
+)
 ```
-
 

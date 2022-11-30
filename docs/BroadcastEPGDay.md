@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**day** | **Date** |  | [optional] 
-**results** | [**Array&lt;BroadcastEPGResult&gt;**](BroadcastEPGResult.md) |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **day** | **Date** |  | [optional] |
+| **results** | [**Array&lt;BroadcastEPGResult&gt;**](BroadcastEPGResult.md) |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::BroadcastEPGDay.new(day: Mon Jan 11 01:00:00 CET 2016,
-                                 results: null)
+instance = RadioManagerClient::BroadcastEPGDay.new(
+  day: Mon Jan 11 01:00:00 CET 2016,
+  results: null
+)
 ```
-
 

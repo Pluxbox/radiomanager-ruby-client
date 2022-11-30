@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**tags** | **Array&lt;Integer&gt;** |  | [optional] 
-**presenters** | **Array&lt;Integer&gt;** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **tags** | **Array&lt;Integer&gt;** |  | [optional] |
+| **presenters** | **Array&lt;Integer&gt;** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ProgramInputOnlyAllOf.new(tags: null,
-                                 presenters: null)
+instance = RadioManagerClient::ProgramInputOnlyAllOf.new(
+  tags: null,
+  presenters: null
+)
 ```
-
 

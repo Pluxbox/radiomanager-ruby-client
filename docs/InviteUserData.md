@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**email** | **String** |  | 
-**role_ids** | **Array&lt;Integer&gt;** |  | 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **email** | **String** |  |  |
+| **role_ids** | **Array&lt;Integer&gt;** |  |  |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::InviteUserData.new(email: info@example.com,
-                                 role_ids: null)
+instance = RadioManagerClient::InviteUserData.new(
+  email: info@example.com,
+  role_ids: null
+)
 ```
-
 

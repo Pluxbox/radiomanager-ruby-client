@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**tag_id** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **tag_id** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::TagRelationsBroadcastsParams.new(tag_id: 1)
+instance = RadioManagerClient::TagRelationsBroadcastsParams.new(
+  tag_id: 1
+)
 ```
-
 

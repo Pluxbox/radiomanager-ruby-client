@@ -2,56 +2,74 @@
 
 All URIs are relative to *https://radiomanager.io/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_model_type_by_id**](ModelTypeApi.md#get_model_type_by_id) | **GET** /model_types/{id} | Get modelType by id
-[**list_model_types**](ModelTypeApi.md#list_model_types) | **GET** /model_types | Get all modelTypes.
-
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**get_model_type_by_id**](ModelTypeApi.md#get_model_type_by_id) | **GET** /model_types/{id} | Get modelType by id |
+| [**list_model_types**](ModelTypeApi.md#list_model_types) | **GET** /model_types | Get all modelTypes. |
 
 
 ## get_model_type_by_id
 
-> ModelTypeResult get_model_type_by_id(id, opts)
+> <ModelTypeResult> get_model_type_by_id(id, opts)
 
 Get modelType by id
 
 Get modelType by id
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
   # Configure API key authorization: API-Key
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
+  # config.api_key_prefix['API-Key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ModelTypeApi.new
-id = 0 # Integer | ID of ModelType **(Required)**
+id = 789 # Integer | ID of ModelType **(Required)**
 opts = {
-  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
+  order_direction: 'asc', # String | Direction of ordering *(Optional)*
+  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
-  #Get modelType by id
+  # Get modelType by id
   result = api_instance.get_model_type_by_id(id, opts)
   p result
 rescue RadioManagerClient::ApiError => e
-  puts "Exception when calling ModelTypeApi->get_model_type_by_id: #{e}"
+  puts "Error when calling ModelTypeApi->get_model_type_by_id: #{e}"
+end
+```
+
+#### Using the get_model_type_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ModelTypeResult>, Integer, Hash)> get_model_type_by_id_with_http_info(id, opts)
+
+```ruby
+begin
+  # Get modelType by id
+  data, status_code, headers = api_instance.get_model_type_by_id_with_http_info(id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ModelTypeResult>
+rescue RadioManagerClient::ApiError => e
+  puts "Error when calling ModelTypeApi->get_model_type_by_id_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ID of ModelType **(Required)** | [default to 0]
- **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | ID of ModelType **(Required)** |  |
+| **order_direction** | **String** | Direction of ordering *(Optional)* | [optional] |
+| **_external_station_id** | **Integer** | Query on a different (content providing) station *(Optional)* | [optional] |
 
 ### Return type
 
@@ -69,71 +87,82 @@ Name | Type | Description  | Notes
 
 ## list_model_types
 
-> ModelTypeResults list_model_types(opts)
+> <InlineResponse2009> list_model_types(opts)
 
 Get all modelTypes.
 
 List all modelTypes.
 
-### Example
+### Examples
 
 ```ruby
-# load the gem
+require 'time'
 require 'radiomanager_client'
 # setup authorization
 RadioManagerClient.configure do |config|
   # Configure API key authorization: API-Key
-  config.api_key['api-key'] = 'YOUR API KEY'
+  config.api_key['API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
+  # config.api_key_prefix['API-Key'] = 'Bearer'
 end
 
 api_instance = RadioManagerClient::ModelTypeApi.new
 opts = {
-  page: 56, # Integer | Current page *(Optional)*
-  program_id: 56, # Integer | Search on Program ID *(Optional)*
-  broadcast_id: 56, # Integer | Search on Broadcast ID *(Optional)*
-  item_id: 56, # Integer | Search on Item ID *(Optional)*
-  campaign_id: 56, # Integer | Search on Campaign ID *(Optional)*
-  presenter_id: 56, # Integer | Search on Presenter ID *(Optional)*
-  contact_id: 56, # Integer | Search on Contact ID *(Optional)*
-  model: 'model_example', # String | Search Modeltypes for certain Model *(Optional)*
-  limit: 56, # Integer | Results per page *(Optional)*
-  order_by: 'order_by_example', # String | Field to order the results *(Optional)*
-  order_direction: 'order_direction_example', # String | Direction of ordering *(Optional)*
-  _external_station_id: 56 # Integer | Query on a different (content providing) station *(Optional)*
+  program_id: 789, # Integer | Search on Program ID *(Optional)*
+  broadcast_id: 789, # Integer | Search on Broadcast ID *(Optional)*
+  item_id: 789, # Integer | Search on Item ID *(Optional)*
+  campaign_id: 789, # Integer | Search on Campaign ID *(Optional)*
+  presenter_id: 789, # Integer | Search on Presenter ID *(Optional)*
+  contact_id: 789, # Integer | Search on Contact ID *(Optional)*
+  model: 'broadcast', # String | Search Modeltypes for certain Model *(Optional)*
+  order_direction: 'asc', # String | Direction of ordering *(Optional)*
+  _external_station_id: 789 # Integer | Query on a different (content providing) station *(Optional)*
 }
 
 begin
-  #Get all modelTypes.
+  # Get all modelTypes.
   result = api_instance.list_model_types(opts)
   p result
 rescue RadioManagerClient::ApiError => e
-  puts "Exception when calling ModelTypeApi->list_model_types: #{e}"
+  puts "Error when calling ModelTypeApi->list_model_types: #{e}"
+end
+```
+
+#### Using the list_model_types_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<InlineResponse2009>, Integer, Hash)> list_model_types_with_http_info(opts)
+
+```ruby
+begin
+  # Get all modelTypes.
+  data, status_code, headers = api_instance.list_model_types_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <InlineResponse2009>
+rescue RadioManagerClient::ApiError => e
+  puts "Error when calling ModelTypeApi->list_model_types_with_http_info: #{e}"
 end
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Integer**| Current page *(Optional)* | [optional] 
- **program_id** | **Integer**| Search on Program ID *(Optional)* | [optional] 
- **broadcast_id** | **Integer**| Search on Broadcast ID *(Optional)* | [optional] 
- **item_id** | **Integer**| Search on Item ID *(Optional)* | [optional] 
- **campaign_id** | **Integer**| Search on Campaign ID *(Optional)* | [optional] 
- **presenter_id** | **Integer**| Search on Presenter ID *(Optional)* | [optional] 
- **contact_id** | **Integer**| Search on Contact ID *(Optional)* | [optional] 
- **model** | **String**| Search Modeltypes for certain Model *(Optional)* | [optional] 
- **limit** | **Integer**| Results per page *(Optional)* | [optional] 
- **order_by** | **String**| Field to order the results *(Optional)* | [optional] 
- **order_direction** | **String**| Direction of ordering *(Optional)* | [optional] 
- **_external_station_id** | **Integer**| Query on a different (content providing) station *(Optional)* | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **program_id** | **Integer** | Search on Program ID *(Optional)* | [optional] |
+| **broadcast_id** | **Integer** | Search on Broadcast ID *(Optional)* | [optional] |
+| **item_id** | **Integer** | Search on Item ID *(Optional)* | [optional] |
+| **campaign_id** | **Integer** | Search on Campaign ID *(Optional)* | [optional] |
+| **presenter_id** | **Integer** | Search on Presenter ID *(Optional)* | [optional] |
+| **contact_id** | **Integer** | Search on Contact ID *(Optional)* | [optional] |
+| **model** | **String** | Search Modeltypes for certain Model *(Optional)* | [optional] |
+| **order_direction** | **String** | Direction of ordering *(Optional)* | [optional] |
+| **_external_station_id** | **Integer** | Query on a different (content providing) station *(Optional)* | [optional] |
 
 ### Return type
 
-[**ModelTypeResults**](ModelTypeResults.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

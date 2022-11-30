@@ -2,22 +2,23 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**href** | **String** |  | [optional] 
-**model** | **String** |  | [optional] 
-**operation** | **String** |  | [optional] 
-**params** | [**ModelTypeRelationsCampaignsParams**](ModelTypeRelationsCampaignsParams.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **href** | **String** |  | [optional] |
+| **model** | **String** |  | [optional] |
+| **operation** | **String** |  | [optional] |
+| **params** | [**ModelTypeRelationsCampaignsParams**](ModelTypeRelationsCampaignsParams.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ModelTypeRelationsCampaigns.new(href: https://radiomanager.pluxbox.com/api/v2/campaigns/model_type_id&#x3D;1,
-                                 model: Campaign,
-                                 operation: getCampaignList,
-                                 params: null)
+instance = RadioManagerClient::ModelTypeRelationsCampaigns.new(
+  href: https://radiomanager.io/api/v2/campaigns/model_type_id&#x3D;1,
+  model: Campaign,
+  operation: getCampaignList,
+  params: null
+)
 ```
-
 

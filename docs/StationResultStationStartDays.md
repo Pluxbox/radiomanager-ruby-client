@@ -2,28 +2,29 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**monday** | **String** |  | [optional] 
-**tuesday** | **String** |  | [optional] 
-**wednesday** | **String** |  | [optional] 
-**thursday** | **String** |  | [optional] 
-**friday** | **String** |  | [optional] 
-**saturday** | **String** |  | [optional] 
-**sunday** | **String** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **monday** | **String** |  | [optional] |
+| **tuesday** | **String** |  | [optional] |
+| **wednesday** | **String** |  | [optional] |
+| **thursday** | **String** |  | [optional] |
+| **friday** | **String** |  | [optional] |
+| **saturday** | **String** |  | [optional] |
+| **sunday** | **String** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::StationResultStationStartDays.new(monday: 6:00,
-                                 tuesday: 6:00,
-                                 wednesday: 6:00,
-                                 thursday: 6:00,
-                                 friday: 6:00,
-                                 saturday: 6:00,
-                                 sunday: 6:00)
+instance = RadioManagerClient::StationResultStationStartDays.new(
+  monday: 360,
+  tuesday: 360,
+  wednesday: 360,
+  thursday: 360,
+  friday: 360,
+  saturday: 360,
+  sunday: 360
+)
 ```
-
 

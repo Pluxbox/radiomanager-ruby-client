@@ -2,22 +2,23 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**broadcasts** | [**TagRelationsBroadcasts**](TagRelationsBroadcasts.md) |  | [optional] 
-**programs** | [**TagRelationsPrograms**](TagRelationsPrograms.md) |  | [optional] 
-**contacts** | [**TagRelationsContacts**](TagRelationsContacts.md) |  | [optional] 
-**items** | [**TagRelationsItems**](TagRelationsItems.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **broadcasts** | [**TagRelationsBroadcasts**](TagRelationsBroadcasts.md) |  | [optional] |
+| **programs** | [**TagRelationsPrograms**](TagRelationsPrograms.md) |  | [optional] |
+| **contacts** | [**TagRelationsContacts**](TagRelationsContacts.md) |  | [optional] |
+| **items** | [**TagRelationsItems**](TagRelationsItems.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::TagRelations.new(broadcasts: null,
-                                 programs: null,
-                                 contacts: null,
-                                 items: null)
+instance = RadioManagerClient::TagRelations.new(
+  broadcasts: null,
+  programs: null,
+  contacts: null,
+  items: null
+)
 ```
-
 

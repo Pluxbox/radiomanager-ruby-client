@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**station** | [**StationResultStation**](StationResultStation.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **station** | [**StationResultStation**](StationResultStation.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::StationResult.new(station: null)
+instance = RadioManagerClient::StationResult.new(
+  station: null
+)
 ```
-
 

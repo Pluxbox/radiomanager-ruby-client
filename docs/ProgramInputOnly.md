@@ -2,15 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **tags** | **Array&lt;Integer&gt;** |  | [optional] |
+| **presenters** | **Array&lt;Integer&gt;** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ProgramInputOnly.new()
+instance = RadioManagerClient::ProgramInputOnly.new(
+  tags: null,
+  presenters: null
+)
 ```
-
 

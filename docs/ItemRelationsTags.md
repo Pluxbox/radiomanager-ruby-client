@@ -2,22 +2,23 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**href** | **String** |  | [optional] 
-**model** | **String** |  | [optional] 
-**operation** | **String** |  | [optional] 
-**params** | [**ItemRelationsContactsParams**](ItemRelationsContactsParams.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **href** | **String** |  | [optional] |
+| **model** | **String** |  | [optional] |
+| **operation** | **String** |  | [optional] |
+| **params** | [**ItemRelationsContactsParams**](ItemRelationsContactsParams.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::ItemRelationsTags.new(href: https://radiomanager.pluxbox.com/api/v2/tags?item_id&#x3D;1,
-                                 model: Tag,
-                                 operation: listTags,
-                                 params: null)
+instance = RadioManagerClient::ItemRelationsTags.new(
+  href: https://radiomanager.io/api/v2/tags?item_id&#x3D;1,
+  model: Tag,
+  operation: listTags,
+  params: null
+)
 ```
-
 

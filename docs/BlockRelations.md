@@ -2,20 +2,21 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**items** | [**BlockRelationsItems**](BlockRelationsItems.md) |  | [optional] 
-**broadcast** | [**BlockRelationsBroadcast**](BlockRelationsBroadcast.md) |  | [optional] 
-**program** | [**BlockRelationsProgram**](BlockRelationsProgram.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **items** | [**BlockRelationsItems**](BlockRelationsItems.md) |  | [optional] |
+| **broadcast** | [**BlockRelationsBroadcast**](BlockRelationsBroadcast.md) |  | [optional] |
+| **program** | [**BlockRelationsProgram**](BlockRelationsProgram.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::BlockRelations.new(items: null,
-                                 broadcast: null,
-                                 program: null)
+instance = RadioManagerClient::BlockRelations.new(
+  items: null,
+  broadcast: null,
+  program: null
+)
 ```
-
 

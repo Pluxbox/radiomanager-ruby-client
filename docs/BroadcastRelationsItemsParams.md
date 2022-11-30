@@ -2,16 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**broadcast_id** | **Integer** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **broadcast_id** | **Integer** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::BroadcastRelationsItemsParams.new(broadcast_id: 1)
+instance = RadioManagerClient::BroadcastRelationsItemsParams.new(
+  broadcast_id: 1
+)
 ```
-
 

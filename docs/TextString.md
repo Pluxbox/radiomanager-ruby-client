@@ -2,24 +2,25 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **Integer** |  | 
-**content** | **String** |  | 
-**name** | **String** |  | 
-**created_at** | **DateTime** |  | [optional] 
-**updated_at** | **DateTime** |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** |  |  |
+| **content** | **String** |  |  |
+| **name** | **String** |  |  |
+| **created_at** | **Time** |  | [optional] |
+| **updated_at** | **Time** |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::TextString.new(id: 1,
-                                 content: null,
-                                 name: null,
-                                 created_at: 2016-01-11T22:01:11+02:00,
-                                 updated_at: 2016-01-11T22:01:11+02:00)
+instance = RadioManagerClient::TextString.new(
+  id: 1,
+  content: Now Playing: Something something Purple Haze,
+  name: default,
+  created_at: 2016-01-11T22:01:11+02:00,
+  updated_at: 2016-01-11T22:01:11+02:00
+)
 ```
-
 

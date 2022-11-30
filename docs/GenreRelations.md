@@ -2,18 +2,19 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**broadcasts** | [**GenreRelationsBroadcasts**](GenreRelationsBroadcasts.md) |  | [optional] 
-**programs** | [**GenreRelationsPrograms**](GenreRelationsPrograms.md) |  | [optional] 
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **broadcasts** | [**GenreRelationsBroadcasts**](GenreRelationsBroadcasts.md) |  | [optional] |
+| **programs** | [**GenreRelationsPrograms**](GenreRelationsPrograms.md) |  | [optional] |
 
-## Code Sample
+## Example
 
 ```ruby
-require 'RadioManagerClient'
+require 'radiomanager_client'
 
-instance = RadioManagerClient::GenreRelations.new(broadcasts: null,
-                                 programs: null)
+instance = RadioManagerClient::GenreRelations.new(
+  broadcasts: null,
+  programs: null
+)
 ```
-
 
