@@ -3,7 +3,7 @@
 RadioManagerClient - the Ruby gem for the RadioManager
 
 - API version: 2.0
-- Package version: 1.2.0-dev
+- Package version: 1.2.1-dev
 - Build package: org.openapitools.codegen.languages.RubyClientCodegen
 For more information, please visit [https://pluxbox.com](https://pluxbox.com)
 
@@ -50,7 +50,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://radiomanager.io/api/v2*
+All URIs are relative to *https://staging.radiomanager.io/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

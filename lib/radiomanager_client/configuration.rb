@@ -140,7 +140,7 @@ module RadioManagerClient
 
     def initialize
       @scheme = 'https'
-      @host = 'radiomanager.io'
+      @host = 'staging.radiomanager.io'
       @base_path = '/api/v2'
       @server_index = 0
       @server_operation_index = {}
@@ -230,7 +230,7 @@ module RadioManagerClient
     def server_settings
       [
         {
-          url: "https://radiomanager.io/api/v2",
+          url: "https://staging.radiomanager.io/api/v2",
           description: "No description provided",
         },
         {
