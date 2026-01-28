@@ -1,3 +1,4 @@
+# DEPRICATED - USE THE API
 # radiomanager_client
 
 RadioManagerClient - the Ruby gem for the RadioManager
